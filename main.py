@@ -23,7 +23,8 @@ import neat
 import pickle
 import time
 
-from src.neat_runner import eval_genomes
+from src.neat_runner    import eval_genomes
+from src.parallel_eval  import ParallelEvaluator
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 CONFIG_PATH      = os.path.join("config", "neat_config.txt")
@@ -95,10 +96,10 @@ def run_neat():
     start_time = time.time()
 
     # ── Run evolution ─────────────────────────────────────────────────────
-    # population.run() calls eval_genomes() every generation,
-    # then evolves the next generation automatically.
-    # Returns the single best genome found across ALL generations.
-    best_genome = population.run(eval_genomes, NUM_GENERATIONS)
+    # Use parallel evaluation for full training runs.
+    # Switch to eval_genomes (sequential) only for debugging.
+    evaluator   = ParallelEvaluator()
+    best_genome = population.run(evaluator.evaluate, NUM_GENERATIONS)
 
     elapsed = time.time() - start_time
 

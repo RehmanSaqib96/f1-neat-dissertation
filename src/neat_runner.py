@@ -19,6 +19,11 @@ import numpy as np
 from src.environment import RacingEnv
 from src.fitness     import compute_fitness, detect_grass
 
+# Windows multiprocessing fix — prevents worker processes from
+# trying to spawn their own children when the module is imported
+import multiprocessing
+multiprocessing.freeze_support()
+
 # ── Evaluation constants ────────────────────────────────────────────────────
 
 # Maximum frames per episode.
