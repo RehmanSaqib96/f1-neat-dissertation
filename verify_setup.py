@@ -118,7 +118,7 @@ try:
     config = neat.Config(
         neat.DefaultGenome,
         neat.DefaultReproduction,
-        neat.DefaultSpeciation,
+        neat.DefaultSpeciesSet,
         neat.DefaultStagnation,
         config_path
     )
