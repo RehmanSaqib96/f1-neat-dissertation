@@ -5,12 +5,14 @@ Weights below are the primary experimental variable; wrong weights → degenerat
 
 import numpy as np
 
-# ── Fitness weights ────────────────────────────────────────────────────────
-W_PROGRESS   = 1.0    # reward per track tile visited
-W_SPEED      = 0.02  # reward per unit of speed
-W_TIME       = 0.05   # penalty per frame
-W_GRASS      = 3.0    # penalty per grass frame
-W_STEER_LOCK = 0.1    # penalises holding full lock steering
+# ── Fitness weights v3 ─────────────────────────────────────────────────────
+# Structural exploit prevention now handles the main cheat strategies.
+# These weights fine-tune quality of genuine driving behaviour.
+W_PROGRESS    = 1.0    # base environment reward
+W_SPEED       = 0.03   # speed bonus
+W_TIME        = 0.05   # time penalty
+W_GRASS       = 5.0    # grass penalty — extremely costly
+W_STEER_LOCK  = 0.15   # steer lock penalty
 
 # Pixels with G > threshold and G > R*1.3 are classified as grass.
 GRASS_GREEN_THRESHOLD = 150

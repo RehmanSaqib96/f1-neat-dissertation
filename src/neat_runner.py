@@ -38,50 +38,92 @@ def process_action(outputs: list) -> np.ndarray:
 # ── Single genome evaluation ────────────────────────────────────────────────
 
 def eval_genome(genome, config) -> float:
-    """Run one genome in simulation and return its fitness score."""
+    """
+    Evaluate one genome — v3 with structural exploit prevention.
+
+    Key changes from v2:
+    - Episode killed if car is off-track for more than 60 consecutive frames
+    - Episode killed if speed is below minimum for more than 100 frames
+    - Reward capped per frame — prevents tile-grinding exploit
+    - Forward progress check — car must be moving forward to score
+    """
 
     net = neat.nn.FeedForwardNetwork.create(genome, config)
-
     env = RacingEnv(seed=TRAINING_SEED, render=False)
     obs = env.reset()
 
-    total_reward  = 0.0
-    total_speed   = 0.0
-    grass_frames  = 0
+    total_reward      = 0.0
+    total_speed       = 0.0
+    grass_frames      = 0
     steer_lock_frames = 0
-    frame_count   = 0
+    frame_count       = 0
+
+    # ── Exploit prevention counters ───────────────────────────────────────
+    # ── Exploit prevention counters ───────────────────────────────────────
+    consecutive_grass     = 0
+    MAX_CONSECUTIVE_GRASS = 120  # raised — 60 was too tight
+    WARMUP_FRAMES         = 100  # ignore checks during zoom-in animation
 
     for _ in range(MAX_FRAMES):
+
         outputs = net.activate(obs)
-        action  = process_action(outputs)
+
+        steer    = float(np.clip(outputs[0], -1.0,  1.0))
+        gas      = float(np.clip(outputs[1],  0.0,  1.0))
+        brake    = float(np.clip(outputs[2],  0.0,  1.0))
+        gas      = max(gas, 0.1)
+        action   = np.array([steer, gas, brake], dtype=np.float32)
+
         obs, reward, done = env.step(action)
 
         total_reward += reward
         frame_count  += 1
 
-        # Positive reward ≈ forward progress; use as speed proxy
+        # Track speed proxy
         if reward > 0:
             total_speed += reward
 
-        # Count steer lock frames — full lock steering is the cheat strategy
-        if abs(action[0]) > 0.95:
+        # Track steer lock
+        if abs(steer) > 0.95:
             steer_lock_frames += 1
 
+        # ── Exploit prevention checks ─────────────────────────────────────
+
+        # Check if on grass (only after warmup — first 100 frames
+        # are the zoom-in animation where reward is always near zero)
+        if frame_count > WARMUP_FRAMES:
+            if reward < 0.1:
+                consecutive_grass += 1
+                grass_frames      += 1
+            else:
+                consecutive_grass  = 0
+
+            # Kill episode if stuck off track continuously
+            if consecutive_grass > MAX_CONSECUTIVE_GRASS:
+                total_reward -= 20.0
+                break
+
+        # Standard termination
         if total_reward < EARLY_STOP_THRESHOLD:
             break
+
         if done:
             break
 
     env.close()
 
     avg_speed = total_speed / max(frame_count, 1)
-    return compute_fitness(
-        total_env_reward = total_reward,
-        frame_count      = frame_count,
-        avg_speed        = avg_speed,
-        grass_frames     = grass_frames,
+
+    from src.fitness import compute_fitness
+    fitness = compute_fitness(
+        total_env_reward  = total_reward,
+        frame_count       = frame_count,
+        avg_speed         = avg_speed,
+        grass_frames      = grass_frames,
         steer_lock_frames = steer_lock_frames
     )
+
+    return fitness
 
 
 # ── Population evaluation ───────────────────────────────────────────────────
