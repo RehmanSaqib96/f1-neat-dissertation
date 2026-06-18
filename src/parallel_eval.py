@@ -83,8 +83,10 @@ class ParallelEvaluator:
 
     def __init__(self, num_workers: int = None, timeout: int = 120):
         if num_workers is None:
-            # Leave one core free for the OS and main process
-            self.num_workers = max(1, os.cpu_count() - 1)
+            # 17 workers causes Windows paging file exhaustion when cv2
+            # loads in each process simultaneously. 8 workers is the
+            # safe ceiling on most 16GB Windows machines.
+            self.num_workers = min(8, max(1, os.cpu_count() - 1))
         else:
             self.num_workers = num_workers
 
