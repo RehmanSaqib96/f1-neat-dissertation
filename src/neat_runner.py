@@ -48,8 +48,8 @@ def eval_genome(genome, config) -> float:
     total_reward  = 0.0
     total_speed   = 0.0
     grass_frames  = 0
+    steer_lock_frames = 0
     frame_count   = 0
-    raw_obs_cache = None  # stores last raw obs for grass detection
 
     for _ in range(MAX_FRAMES):
         outputs = net.activate(obs)
@@ -63,6 +63,10 @@ def eval_genome(genome, config) -> float:
         if reward > 0:
             total_speed += reward
 
+        # Count steer lock frames — full lock steering is the cheat strategy
+        if abs(action[0]) > 0.95:
+            steer_lock_frames += 1
+
         if total_reward < EARLY_STOP_THRESHOLD:
             break
         if done:
@@ -75,7 +79,8 @@ def eval_genome(genome, config) -> float:
         total_env_reward = total_reward,
         frame_count      = frame_count,
         avg_speed        = avg_speed,
-        grass_frames     = grass_frames
+        grass_frames     = grass_frames,
+        steer_lock_frames = steer_lock_frames
     )
 
 

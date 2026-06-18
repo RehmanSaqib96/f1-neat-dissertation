@@ -7,9 +7,10 @@ import numpy as np
 
 # ── Fitness weights ────────────────────────────────────────────────────────
 W_PROGRESS   = 1.0    # reward per track tile visited
-W_SPEED      = 0.005  # reward per unit of speed
-W_TIME       = 0.03   # penalty per frame
-W_GRASS      = 0.5    # penalty per grass frame
+W_SPEED      = 0.02  # reward per unit of speed
+W_TIME       = 0.05   # penalty per frame
+W_GRASS      = 3.0    # penalty per grass frame
+W_STEER_LOCK = 0.1    # penalises holding full lock steering
 
 # Pixels with G > threshold and G > R*1.3 are classified as grass.
 GRASS_GREEN_THRESHOLD = 150
@@ -19,15 +20,42 @@ def compute_fitness(
     total_env_reward: float,
     frame_count: int,
     avg_speed: float,
-    grass_frames: int
+    grass_frames: int,
+    steer_lock_frames: int = 0
 ) -> float:
-    """Return fitness score (higher = better). Floored at -100 so NEAT always has a signal."""
+    """
+    Compute fitness score for one genome's episode.
 
-    base          = total_env_reward
-    speed_bonus   = W_SPEED * avg_speed * frame_count
+    v2 changes:
+    - Grass penalty tripled (3.0 vs 0.5)
+    - Speed bonus quadrupled (0.02 vs 0.005)
+    - Time penalty increased (0.05 vs 0.03)
+    - Steer lock penalty added — discourages always-right strategy
+    - Speed efficiency bonus — rewards fast tile completion
+
+    """
+    # Base environment reward
+    base = total_env_reward
+
+    # Speed bonus — rewards aggressive throttle and fast lap times
+    speed_bonus = W_SPEED * avg_speed * frame_count
+
+    # Grass penalty — heavily discourages off-track driving
     grass_penalty = W_GRASS * grass_frames
 
-    return max(base + speed_bonus - grass_penalty, -100.0)
+    # Steer lock penalty — discourages the always-steer-right cheat
+    steer_penalty = W_STEER_LOCK * steer_lock_frames
+
+    # Speed efficiency bonus — rewards completing tiles quickly
+    # Divides progress by time, so slow crawling scores worse
+    if frame_count > 0 and total_env_reward > 0:
+        efficiency_bonus = (total_env_reward / frame_count) * 50.0
+    else:
+        efficiency_bonus = 0.0
+
+    fitness = base + speed_bonus + efficiency_bonus - grass_penalty - steer_penalty
+
+    return max(fitness, -100.0)
 
 
 def detect_grass(obs_flat: 'np.ndarray') -> bool:
