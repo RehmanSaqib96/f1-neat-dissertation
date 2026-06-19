@@ -39,13 +39,19 @@ def process_action(outputs: list) -> np.ndarray:
 
 def eval_genome(genome, config) -> float:
     """
-    Evaluate one genome — v3 with structural exploit prevention.
+    Evaluate one genome — v4 with window-based progress tracking.
 
-    Key changes from v2:
-    - Episode killed if car is off-track for more than 60 consecutive frames
-    - Episode killed if speed is below minimum for more than 100 frames
-    - Reward capped per frame — prevents tile-grinding exploit
-    - Forward progress check — car must be moving forward to score
+    Key insight from diagnostic:
+        CarRacing-v3 reward = +3.43 when crossing a tile boundary
+                            = -0.1  every other frame (always, even on track)
+        
+        Per-frame reward < 0.1 does NOT mean off track.
+        It just means the car hasn't crossed a tile boundary this frame.
+        
+    Correct exploit detection:
+        Track how many TILES have been visited in the last N frames.
+        If zero new tiles visited in 200 frames → car is stuck/spinning.
+        The -100 reward from the environment = car went fully off track.
     """
 
     net = neat.nn.FeedForwardNetwork.create(genome, config)
@@ -58,52 +64,50 @@ def eval_genome(genome, config) -> float:
     steer_lock_frames = 0
     frame_count       = 0
 
-    # ── Exploit prevention counters ───────────────────────────────────────
-    # ── Exploit prevention counters ───────────────────────────────────────
-    consecutive_grass     = 0
-    MAX_CONSECUTIVE_GRASS = 120  # raised — 60 was too tight
-    WARMUP_FRAMES         = 100  # ignore checks during zoom-in animation
+    # ── Progress tracking ─────────────────────────────────────────────────
+    # Count tiles visited in last window — if zero for too long, car is stuck
+    frames_since_tile  = 0
+    MAX_FRAMES_NO_TILE = 200  # kill episode if no new tile for 200 frames
+    TILE_REWARD        = 1.0  # any reward above this = tile crossed
 
     for _ in range(MAX_FRAMES):
 
         outputs = net.activate(obs)
 
-        steer    = float(np.clip(outputs[0], -1.0,  1.0))
-        gas      = float(np.clip(outputs[1],  0.0,  1.0))
-        brake    = float(np.clip(outputs[2],  0.0,  1.0))
-        gas      = max(gas, 0.1)
-        action   = np.array([steer, gas, brake], dtype=np.float32)
+        steer  = float(np.clip(outputs[0], -1.0,  1.0))
+        gas    = float(np.clip(outputs[1],  0.0,  1.0))
+        brake  = float(np.clip(outputs[2],  0.0,  1.0))
+        gas    = max(gas, 0.1)
+        action = np.array([steer, gas, brake], dtype=np.float32)
 
         obs, reward, done = env.step(action)
 
         total_reward += reward
         frame_count  += 1
 
-        # Track speed proxy
-        if reward > 0:
-            total_speed += reward
-
         # Track steer lock
         if abs(steer) > 0.95:
             steer_lock_frames += 1
 
-        # ── Exploit prevention checks ─────────────────────────────────────
+        # Track speed — only count frames where a tile was crossed
+        if reward > TILE_REWARD:
+            total_speed       += reward
+            frames_since_tile  = 0
+        else:
+            frames_since_tile += 1
 
-        # Check if on grass (only after warmup — first 100 frames
-        # are the zoom-in animation where reward is always near zero)
-        if frame_count > WARMUP_FRAMES:
-            if reward < 0.1:
-                consecutive_grass += 1
-                grass_frames      += 1
-            else:
-                consecutive_grass  = 0
+        # Track grass — the environment gives -100 when fully off track
+        if reward < -50:
+            grass_frames += 50  # heavily penalise going fully off track
 
-            # Kill episode if stuck off track continuously
-            if consecutive_grass > MAX_CONSECUTIVE_GRASS:
-                total_reward -= 20.0
-                break
+        # ── Stuck detection ───────────────────────────────────────────────
+        # If no new tiles visited in 200 frames, car is spinning/stuck
+        # Only apply after frame 50 (avoid zoom-in animation)
+        if frame_count > 50 and frames_since_tile > MAX_FRAMES_NO_TILE:
+            total_reward -= 15.0
+            break
 
-        # Standard termination
+        # Standard early stop
         if total_reward < EARLY_STOP_THRESHOLD:
             break
 
