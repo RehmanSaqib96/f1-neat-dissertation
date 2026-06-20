@@ -38,7 +38,7 @@ STATS_PATH       = os.path.join(RESULTS_DIR, "fitness_history.txt")
 # just enough to see the car attempt to drive and
 # confirm the full pipeline works end to end.
 # Phase 3 increases this to 300+.
-NUM_GENERATIONS     = 30
+NUM_GENERATIONS     = 120
 CHECKPOINT_INTERVAL = 5
 
 
