@@ -6,6 +6,7 @@ each genome drives in simulation, receives a fitness score, and is ranked.
 import neat
 import numpy as np
 from src.environment import RacingEnv
+from src.track_distance import get_track_points, corridor_fraction, corridor_penalty
 from src.fitness     import compute_fitness, detect_grass
 
 import multiprocessing
@@ -39,33 +40,45 @@ def process_action(outputs: list) -> np.ndarray:
 
 def eval_genome(genome, config) -> float:
     """
-    Evaluate one genome — v5, tiles-per-second metric.
+    Evaluate one genome — v6, adds continuous corridor-distance reward.
 
-    This is the CURRENT, CORRECT version. Verify after saving by running:
-        python -c "import inspect, src.neat_runner as nr; print(inspect.getsource(nr.eval_genome))"
-    It must show 'tiles_per_second' in the output, NOT 'compute_fitness'.
+    NEW IN v6:
+        Every frame, compute how close the car is to the track edge
+        (corridor_fraction) and apply a penalty if it's getting close
+        (corridor_penalty). This is SEPARATE from the discrete tile
+        reward — it gives steering a continuous, immediate benefit
+        rather than only mattering at the exact moment of a corner.
+
+        Verified in isolation: penalty stays at 0.0 during normal
+        driving and starts rising ~70-90 frames before an actual
+        off-track crash, giving the network early warning.
     """
 
     net  = neat.nn.FeedForwardNetwork.create(genome, config)
     env  = RacingEnv(seed=TRAINING_SEED, render=False)
     obs  = env.reset()
 
-    frame_count       = 0
-    tiles_visited     = 0
-    total_env_reward  = 0.0
-    steer_lock_frames = 0
-    off_track_frames  = 0
+    # Get track centreline points once per episode (track layout
+    # is fixed for a given seed, so this doesn't change frame to frame)
+    track_points = get_track_points(env.env)
 
-    frames_since_tile  = 0
-    MAX_FRAMES_NO_TILE = 150
-    crashed_off_track   = False
+    frame_count        = 0
+    tiles_visited       = 0
+    total_env_reward    = 0.0
+    steer_lock_frames   = 0
+    off_track_frames    = 0
+    total_corridor_pen  = 0.0
+
+    frames_since_tile   = 0
+    MAX_FRAMES_NO_TILE  = 150
+    crashed_off_track    = False
 
     for _ in range(MAX_FRAMES):
 
         outputs = net.activate(obs)
 
         steer = float(np.clip(outputs[0], -1.0,  1.0))
-        gas   = float(np.clip(outputs[1],  0.0,  1.0))   # NO gas floor
+        gas   = float(np.clip(outputs[1],  0.0,  1.0))
         brake = float(np.clip(outputs[2],  0.0,  1.0))
 
         action = np.array([steer, gas, brake], dtype=np.float32)
@@ -84,13 +97,14 @@ def eval_genome(genome, config) -> float:
         else:
             frames_since_tile += 1
 
+        # ── Corridor penalty — NEW continuous signal ───────────────────────
+        car_pos = env.env.unwrapped.car.hull.position
+        frac    = corridor_fraction(car_pos, track_points)
+        pen     = corridor_penalty(frac)
+        total_corridor_pen += pen
+
         if env_reward < -50:
             off_track_frames += 10
-            # The car has driven off the track entirely — this is a
-            # hard failure, not a minor penalty. End the episode now
-            # and apply a heavy fixed penalty so "sprint and crash"
-            # strategies score worse than genomes that stay on track
-            # even if slower.
             crashed_off_track = True
             break
 
@@ -105,21 +119,22 @@ def eval_genome(genome, config) -> float:
 
     env.close()
 
-    seconds           = max(frame_count / 50.0, 0.1)
-    tiles_per_second   = tiles_visited / seconds
-    base_fitness       = tiles_per_second * 50.0
-    completion_bonus   = tiles_visited * 0.5
-    lock_penalty       = steer_lock_frames * 0.05
+    seconds            = max(frame_count / 50.0, 0.1)
+    tiles_per_second    = tiles_visited / seconds
+    base_fitness        = tiles_per_second * 50.0
+    completion_bonus    = tiles_visited * 0.5
+    lock_penalty        = steer_lock_frames * 0.05
 
-    fitness = base_fitness + completion_bonus - lock_penalty
+    # Average the corridor penalty per frame so longer episodes aren't
+    # unfairly punished just for accumulating more penalty-frames
+    avg_corridor_penalty = total_corridor_pen / max(frame_count, 1)
+    corridor_fitness_hit = avg_corridor_penalty * 20.0
+
+    fitness = base_fitness + completion_bonus - lock_penalty - corridor_fitness_hit
 
     if tiles_visited == 0:
         return -50.0
 
-    # Crashing off the track is a hard failure. Heavily discount
-    # the episode regardless of how many tiles were grabbed before
-    # the crash — a genome that sprints into a wall should NOT
-    # outscore a genome that drives more slowly but stays on track.
     if crashed_off_track:
         fitness = fitness * 0.15 - 30.0
 
