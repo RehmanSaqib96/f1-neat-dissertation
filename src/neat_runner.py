@@ -62,13 +62,13 @@ def eval_genome(genome, config) -> float:
     # is fixed for a given seed, so this doesn't change frame to frame)
     track_points = get_track_points(env.env)
 
-    frame_count        = 0
-    tiles_visited       = 0
-    total_env_reward    = 0.0
-    steer_lock_frames   = 0
-    off_track_frames    = 0
-    total_corridor_pen  = 0.0
-    total_gas           = 0.0
+    frame_count          = 0
+    tiles_visited         = 0
+    total_env_reward      = 0.0
+    steer_lock_frames     = 0
+    off_track_frames      = 0
+    total_corridor_pen    = 0.0
+    total_net_throttle    = 0.0
 
     frames_since_tile   = 0
     MAX_FRAMES_NO_TILE  = 150
@@ -88,7 +88,15 @@ def eval_genome(genome, config) -> float:
 
         frame_count      += 1
         total_env_reward += env_reward
-        total_gas         += gas
+
+        # Net throttle: gas minus brake, floored at zero.
+        # This is what Instance 5 exploited — raw gas magnitude was
+        # rewarded even while brake was simultaneously near-maximum,
+        # producing zero actual forward effort. Net throttle can only
+        # be high when gas is applied WITHOUT significant concurrent
+        # braking.
+        net_throttle = max(gas - brake, 0.0)
+        total_net_throttle += net_throttle
 
         if abs(steer) > 0.95:
             steer_lock_frames += 1
@@ -134,8 +142,8 @@ def eval_genome(genome, config) -> float:
     avg_corridor_penalty = total_corridor_pen / max(frame_count, 1)
     corridor_fitness_hit = avg_corridor_penalty * 60.0
 
-    avg_gas        = total_gas / max(frame_count, 1)
-    activity_bonus = avg_gas * 15.0  # rewards sustained throttle use, discourages idling
+    avg_net_throttle = total_net_throttle / max(frame_count, 1)
+    activity_bonus   = avg_net_throttle * 15.0  # rewards EFFECTIVE throttle, not raw magnitude
 
     fitness = base_fitness + completion_bonus + activity_bonus - lock_penalty - corridor_fitness_hit
 
