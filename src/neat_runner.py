@@ -39,76 +39,57 @@ def process_action(outputs: list) -> np.ndarray:
 
 def eval_genome(genome, config) -> float:
     """
-    Evaluate one genome — v4 with window-based progress tracking.
+    Evaluate one genome — v5, tiles-per-second metric.
 
-    Key insight from diagnostic:
-        CarRacing-v3 reward = +3.43 when crossing a tile boundary
-                            = -0.1  every other frame (always, even on track)
-        
-        Per-frame reward < 0.1 does NOT mean off track.
-        It just means the car hasn't crossed a tile boundary this frame.
-        
-    Correct exploit detection:
-        Track how many TILES have been visited in the last N frames.
-        If zero new tiles visited in 200 frames → car is stuck/spinning.
-        The -100 reward from the environment = car went fully off track.
+    This is the CURRENT, CORRECT version. Verify after saving by running:
+        python -c "import inspect, src.neat_runner as nr; print(inspect.getsource(nr.eval_genome))"
+    It must show 'tiles_per_second' in the output, NOT 'compute_fitness'.
     """
 
-    net = neat.nn.FeedForwardNetwork.create(genome, config)
-    env = RacingEnv(seed=TRAINING_SEED, render=False)
-    obs = env.reset()
+    net  = neat.nn.FeedForwardNetwork.create(genome, config)
+    env  = RacingEnv(seed=TRAINING_SEED, render=False)
+    obs  = env.reset()
 
-    total_reward      = 0.0
-    total_speed       = 0.0
-    grass_frames      = 0
-    steer_lock_frames = 0
     frame_count       = 0
+    tiles_visited     = 0
+    total_env_reward  = 0.0
+    steer_lock_frames = 0
+    off_track_frames  = 0
 
-    # ── Progress tracking ─────────────────────────────────────────────────
-    # Count tiles visited in last window — if zero for too long, car is stuck
     frames_since_tile  = 0
-    MAX_FRAMES_NO_TILE = 200  # kill episode if no new tile for 200 frames
-    TILE_REWARD        = 1.0  # any reward above this = tile crossed
+    MAX_FRAMES_NO_TILE = 150
 
     for _ in range(MAX_FRAMES):
 
         outputs = net.activate(obs)
 
-        steer  = float(np.clip(outputs[0], -1.0,  1.0))
-        gas    = float(np.clip(outputs[1],  0.0,  1.0))
-        brake  = float(np.clip(outputs[2],  0.0,  1.0))
-        gas    = max(gas, 0.1)
+        steer = float(np.clip(outputs[0], -1.0,  1.0))
+        gas   = float(np.clip(outputs[1],  0.0,  1.0))   # NO gas floor
+        brake = float(np.clip(outputs[2],  0.0,  1.0))
+
         action = np.array([steer, gas, brake], dtype=np.float32)
 
-        obs, reward, done = env.step(action)
+        obs, env_reward, done = env.step(action)
 
-        total_reward += reward
-        frame_count  += 1
+        frame_count      += 1
+        total_env_reward += env_reward
 
-        # Track steer lock
         if abs(steer) > 0.95:
             steer_lock_frames += 1
 
-        # Track speed — only count frames where a tile was crossed
-        if reward > TILE_REWARD:
-            total_speed       += reward
+        if env_reward > 1.0:
+            tiles_visited     += 1
             frames_since_tile  = 0
         else:
             frames_since_tile += 1
 
-        # Track grass — the environment gives -100 when fully off track
-        if reward < -50:
-            grass_frames += 50  # heavily penalise going fully off track
+        if env_reward < -50:
+            off_track_frames += 10
 
-        # ── Stuck detection ───────────────────────────────────────────────
-        # If no new tiles visited in 200 frames, car is spinning/stuck
-        # Only apply after frame 50 (avoid zoom-in animation)
         if frame_count > 50 and frames_since_tile > MAX_FRAMES_NO_TILE:
-            total_reward -= 15.0
             break
 
-        # Standard early stop
-        if total_reward < EARLY_STOP_THRESHOLD:
+        if total_env_reward < -20:
             break
 
         if done:
@@ -116,18 +97,19 @@ def eval_genome(genome, config) -> float:
 
     env.close()
 
-    avg_speed = total_speed / max(frame_count, 1)
+    seconds           = max(frame_count / 50.0, 0.1)
+    tiles_per_second   = tiles_visited / seconds
+    base_fitness       = tiles_per_second * 50.0
+    completion_bonus   = tiles_visited * 0.5
+    lock_penalty       = steer_lock_frames * 0.05
+    off_track_penalty  = off_track_frames  * 2.0
 
-    from src.fitness import compute_fitness
-    fitness = compute_fitness(
-        total_env_reward  = total_reward,
-        frame_count       = frame_count,
-        avg_speed         = avg_speed,
-        grass_frames      = grass_frames,
-        steer_lock_frames = steer_lock_frames
-    )
+    fitness = base_fitness + completion_bonus - lock_penalty - off_track_penalty
 
-    return fitness
+    if tiles_visited == 0:
+        return -50.0
+
+    return max(fitness, -100.0)
 
 
 # ── Population evaluation ───────────────────────────────────────────────────

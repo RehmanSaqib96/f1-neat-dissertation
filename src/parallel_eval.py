@@ -28,7 +28,7 @@ class ParallelEvaluator:
     def __init__(self, num_workers: int = None, timeout: int = 120):
         if num_workers is None:
             # Cap at 8 — more causes cv2 paging exhaustion on 16 GB Windows machines
-            self.num_workers = min(8, max(1, os.cpu_count() - 1))
+            self.num_workers = min(12, max(1, os.cpu_count() - 1))
         else:
             self.num_workers = num_workers
 
