@@ -58,6 +58,7 @@ def eval_genome(genome, config) -> float:
 
     frames_since_tile  = 0
     MAX_FRAMES_NO_TILE = 150
+    crashed_off_track   = False
 
     for _ in range(MAX_FRAMES):
 
@@ -85,6 +86,13 @@ def eval_genome(genome, config) -> float:
 
         if env_reward < -50:
             off_track_frames += 10
+            # The car has driven off the track entirely — this is a
+            # hard failure, not a minor penalty. End the episode now
+            # and apply a heavy fixed penalty so "sprint and crash"
+            # strategies score worse than genomes that stay on track
+            # even if slower.
+            crashed_off_track = True
+            break
 
         if frame_count > 50 and frames_since_tile > MAX_FRAMES_NO_TILE:
             break
@@ -102,12 +110,18 @@ def eval_genome(genome, config) -> float:
     base_fitness       = tiles_per_second * 50.0
     completion_bonus   = tiles_visited * 0.5
     lock_penalty       = steer_lock_frames * 0.05
-    off_track_penalty  = off_track_frames  * 2.0
 
-    fitness = base_fitness + completion_bonus - lock_penalty - off_track_penalty
+    fitness = base_fitness + completion_bonus - lock_penalty
 
     if tiles_visited == 0:
         return -50.0
+
+    # Crashing off the track is a hard failure. Heavily discount
+    # the episode regardless of how many tiles were grabbed before
+    # the crash — a genome that sprints into a wall should NOT
+    # outscore a genome that drives more slowly but stays on track.
+    if crashed_off_track:
+        fitness = fitness * 0.15 - 30.0
 
     return max(fitness, -100.0)
 
