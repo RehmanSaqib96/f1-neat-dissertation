@@ -68,6 +68,7 @@ def eval_genome(genome, config) -> float:
     steer_lock_frames   = 0
     off_track_frames    = 0
     total_corridor_pen  = 0.0
+    total_gas           = 0.0
 
     frames_since_tile   = 0
     MAX_FRAMES_NO_TILE  = 150
@@ -87,6 +88,7 @@ def eval_genome(genome, config) -> float:
 
         frame_count      += 1
         total_env_reward += env_reward
+        total_gas         += gas
 
         if abs(steer) > 0.95:
             steer_lock_frames += 1
@@ -96,6 +98,8 @@ def eval_genome(genome, config) -> float:
             frames_since_tile  = 0
         else:
             frames_since_tile += 1
+            # Track total gas applied — used to discourage idling once
+            # a genome has banked enough tiles to "coast" safely
 
         # ── Corridor penalty — NEW continuous signal ───────────────────────
         car_pos = env.env.unwrapped.car.hull.position
@@ -128,9 +132,12 @@ def eval_genome(genome, config) -> float:
     # Average the corridor penalty per frame so longer episodes aren't
     # unfairly punished just for accumulating more penalty-frames
     avg_corridor_penalty = total_corridor_pen / max(frame_count, 1)
-    corridor_fitness_hit = avg_corridor_penalty * 20.0
+    corridor_fitness_hit = avg_corridor_penalty * 60.0
 
-    fitness = base_fitness + completion_bonus - lock_penalty - corridor_fitness_hit
+    avg_gas        = total_gas / max(frame_count, 1)
+    activity_bonus = avg_gas * 15.0  # rewards sustained throttle use, discourages idling
+
+    fitness = base_fitness + completion_bonus + activity_bonus - lock_penalty - corridor_fitness_hit
 
     if tiles_visited == 0:
         return -50.0
