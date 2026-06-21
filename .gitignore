@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# NEAT training checkpoints — regenerated every run, not version controlled
+checkpoints/
+results/best_genome.pkl
+results/fitness_history.txt
