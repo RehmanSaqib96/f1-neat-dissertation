@@ -3,6 +3,7 @@ neat_runner.py — core eval loop. NEAT calls eval_genomes() each generation;
 each genome drives in simulation, receives a fitness score, and is ranked.
 """
 
+import random
 import neat
 import numpy as np
 from src.environment import RacingEnv
@@ -16,7 +17,12 @@ multiprocessing.freeze_support()  # Windows: prevent worker re-spawning on impor
 
 MAX_FRAMES           = 1000   # ~20 s at 50 fps; increase in later phases
 EARLY_STOP_THRESHOLD = -15.0  # kill hopeless genomes early to save time
-TRAINING_SEED        = 42     # fixed seed → same track every eval (fair comparison)
+# Multi-seed training pool. Instead of memorising one fixed track,
+# each genome is evaluated on a randomly chosen seed from this pool
+# every generation. This removes the ability to find a strategy that
+# exploits one specific track's geometry (see Progress Report v5,
+# Instance 6 — "fluctuating-brake stall" memorised seed 42 specifically).
+TRAINING_SEED_POOL = [42, 7, 99, 123, 2024, 17, 256, 1001, 555, 88]
 
 
 # ── Action processing ───────────────────────────────────────────────────────
@@ -54,8 +60,14 @@ def eval_genome(genome, config) -> float:
         off-track crash, giving the network early warning.
     """
 
+    # Pick a random seed from the pool for this evaluation — this is
+    # what creates the multi-seed training pressure. Each genome may
+    # be evaluated on a different track than its siblings, and the
+    # same genome will see different tracks across generations.
+    eval_seed = random.choice(TRAINING_SEED_POOL)
+
     net  = neat.nn.FeedForwardNetwork.create(genome, config)
-    env  = RacingEnv(seed=TRAINING_SEED, render=False)
+    env  = RacingEnv(seed=eval_seed, render=False)
     obs  = env.reset()
 
     # Get track centreline points once per episode (track layout
