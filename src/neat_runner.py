@@ -82,6 +82,16 @@ def eval_genome(genome, config) -> float:
     total_corridor_pen    = 0.0
     total_net_throttle    = 0.0
 
+    # ── Anti-idle: rolling displacement window ──────────────────────────
+    # Instance 7 (universal stall) showed that no existing fitness term
+    # directly measures whether the car is actually moving. This tracks
+    # the car's true position every DISPLACEMENT_CHECK_INTERVAL frames
+    # and ends the episode if it hasn't moved far enough since the last
+    # checkpoint, regardless of which track is being driven.
+    DISPLACEMENT_CHECK_INTERVAL = 100   # frames between checks
+    MIN_DISPLACEMENT            = 8.0   # minimum distance required (sim units)
+    last_checkpoint_pos         = None
+    idled_out                    = False
     frames_since_tile   = 0
     MAX_FRAMES_NO_TILE  = 150
     crashed_off_track    = False
@@ -121,11 +131,27 @@ def eval_genome(genome, config) -> float:
             # Track total gas applied — used to discourage idling once
             # a genome has banked enough tiles to "coast" safely
 
-        # ── Corridor penalty — NEW continuous signal ───────────────────────
+        # ── Corridor penalty ─────────────────────────────────────────────
         car_pos = env.env.unwrapped.car.hull.position
         frac    = corridor_fraction(car_pos, track_points)
         pen     = corridor_penalty(frac)
         total_corridor_pen += pen
+
+        # ── Anti-idle displacement check ────────────────────────────────
+        # Every DISPLACEMENT_CHECK_INTERVAL frames, compare current
+        # position against the position at the last checkpoint. If the
+        # car hasn't moved at least MIN_DISPLACEMENT simulation units,
+        # it is idling (regardless of track) and the episode ends here
+        # with a real penalty, rather than being allowed to passively
+        # run out the clock.
+        if frame_count % DISPLACEMENT_CHECK_INTERVAL == 0:
+            current_pos = np.array([car_pos[0], car_pos[1]])
+            if last_checkpoint_pos is not None:
+                displacement = np.linalg.norm(current_pos - last_checkpoint_pos)
+                if displacement < MIN_DISPLACEMENT:
+                    idled_out = True
+                    break
+            last_checkpoint_pos = current_pos
 
         if env_reward < -50:
             off_track_frames += 10
@@ -164,6 +190,12 @@ def eval_genome(genome, config) -> float:
 
     if crashed_off_track:
         fitness = fitness * 0.15 - 30.0
+
+    # Idling penalty — applied independently of (and in addition to)
+    # the crash penalty above, since a genome could theoretically idle
+    # without ever crashing.
+    if idled_out:
+        fitness = fitness * 0.10 - 40.0
 
     return max(fitness, -100.0)
 
