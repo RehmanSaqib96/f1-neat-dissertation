@@ -88,8 +88,8 @@ def eval_genome(genome, config) -> float:
     # the car's true position every DISPLACEMENT_CHECK_INTERVAL frames
     # and ends the episode if it hasn't moved far enough since the last
     # checkpoint, regardless of which track is being driven.
-    DISPLACEMENT_CHECK_INTERVAL = 100   # frames between checks
-    MIN_DISPLACEMENT            = 8.0   # minimum distance required (sim units)
+    DISPLACEMENT_CHECK_INTERVAL = 50    # check more frequently
+    MIN_DISPLACEMENT            = 12.0  # must move further per window
     last_checkpoint_pos         = None
     idled_out                    = False
     frames_since_tile   = 0
