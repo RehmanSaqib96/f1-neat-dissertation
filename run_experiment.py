@@ -43,7 +43,7 @@ def build_run_id(group, spec, seeds, pop, gens, rep):
     elif group == "C":
         return f"C_pop{pop}_rep{rep}"
     elif group == "D":
-        return f"D_gens{gens}_rep{rep}"
+        return f"D_spec{spec}_gens{gens}_rep{rep}"
     return f"run_{group}_rep{rep}"
 
 
