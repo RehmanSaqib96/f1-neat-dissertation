@@ -1,0 +1,4841 @@
+{
+  "run_id": "C_pop50_rep1",
+  "started_at": "2026-09-05T11:10:36.045419",
+  "elapsed_seconds": 46979.0,
+  "config_params": {
+    "group": "C",
+    "speciation_threshold": 1.5,
+    "seed_pool_size": 10,
+    "population_size": 50,
+    "num_generations": 600,
+    "repetition": 1
+  },
+  "final_genome": {
+    "nodes": 32,
+    "connections": 1816,
+    "stored_fitness": 4.1872
+  },
+  "cross_seed_scores": {
+    "42": 3.6576,
+    "7": -8.3486,
+    "99": -4.7862,
+    "123": -6.582,
+    "2024": -4.8797,
+    "17": -8.3325,
+    "256": -4.8875,
+    "1001": -4.8668,
+    "555": 4.1872,
+    "88": -4.8917
+  },
+  "positive_seeds": 2,
+  "curve_metrics": {
+    "final_best_fitness": 4.1872,
+    "peak_fitness": 374.5223,
+    "peak_generation": 395,
+    "first_positive_generation": 20,
+    "longest_plateau_gens": 4,
+    "mean_fitness_last_50": 9.3547
+  },
+  "fitness_history": [
+    {
+      "generation": 1,
+      "best_fitness": -32.4321,
+      "mean_fitness": -34.0786,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1728
+    },
+    {
+      "generation": 2,
+      "best_fitness": -29.6705,
+      "mean_fitness": -44.1375,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1728
+    },
+    {
+      "generation": 3,
+      "best_fitness": -29.6705,
+      "mean_fitness": -33.7077,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1728
+    },
+    {
+      "generation": 4,
+      "best_fitness": -24.6395,
+      "mean_fitness": -31.1991,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 5,
+      "best_fitness": -22.095,
+      "mean_fitness": -32.4795,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 6,
+      "best_fitness": -24.67,
+      "mean_fitness": -32.8328,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 7,
+      "best_fitness": -21.4482,
+      "mean_fitness": -32.4149,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 8,
+      "best_fitness": -22.095,
+      "mean_fitness": -32.9936,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 9,
+      "best_fitness": -22.095,
+      "mean_fitness": -32.1677,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 10,
+      "best_fitness": -24.1376,
+      "mean_fitness": -32.4255,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 11,
+      "best_fitness": -22.095,
+      "mean_fitness": -31.1952,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 12,
+      "best_fitness": -19.8067,
+      "mean_fitness": -30.8948,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1736
+    },
+    {
+      "generation": 13,
+      "best_fitness": -18.4993,
+      "mean_fitness": -30.3712,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1736
+    },
+    {
+      "generation": 14,
+      "best_fitness": -19.5293,
+      "mean_fitness": -30.9609,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1732
+    },
+    {
+      "generation": 15,
+      "best_fitness": -18.4993,
+      "mean_fitness": -29.2921,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1736
+    },
+    {
+      "generation": 16,
+      "best_fitness": -8.3463,
+      "mean_fitness": -29.1837,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1736
+    },
+    {
+      "generation": 17,
+      "best_fitness": -4.8566,
+      "mean_fitness": -26.1025,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1738
+    },
+    {
+      "generation": 18,
+      "best_fitness": -6.5921,
+      "mean_fitness": -26.9778,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1738
+    },
+    {
+      "generation": 19,
+      "best_fitness": -6.6196,
+      "mean_fitness": -26.5233,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1736
+    },
+    {
+      "generation": 20,
+      "best_fitness": 6.1887,
+      "mean_fitness": -23.5496,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 21,
+      "best_fitness": -6.5506,
+      "mean_fitness": -24.0142,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 22,
+      "best_fitness": -4.872,
+      "mean_fitness": -21.0352,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1736
+    },
+    {
+      "generation": 23,
+      "best_fitness": 4.0126,
+      "mean_fitness": -20.0151,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1735
+    },
+    {
+      "generation": 24,
+      "best_fitness": -4.9032,
+      "mean_fitness": -20.3936,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1735
+    },
+    {
+      "generation": 25,
+      "best_fitness": 0.9462,
+      "mean_fitness": -18.1285,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1737
+    },
+    {
+      "generation": 26,
+      "best_fitness": 2.0572,
+      "mean_fitness": -12.9348,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1728
+    },
+    {
+      "generation": 27,
+      "best_fitness": 0.9462,
+      "mean_fitness": -13.0701,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1737
+    },
+    {
+      "generation": 28,
+      "best_fitness": 2.0572,
+      "mean_fitness": -11.9527,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1728
+    },
+    {
+      "generation": 29,
+      "best_fitness": -4.8873,
+      "mean_fitness": -16.5837,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1735
+    },
+    {
+      "generation": 30,
+      "best_fitness": 14.588,
+      "mean_fitness": -8.335,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1735
+    },
+    {
+      "generation": 31,
+      "best_fitness": -4.8862,
+      "mean_fitness": -12.487,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1735
+    },
+    {
+      "generation": 32,
+      "best_fitness": -4.8862,
+      "mean_fitness": -14.7558,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1735
+    },
+    {
+      "generation": 33,
+      "best_fitness": 0.1948,
+      "mean_fitness": -10.0204,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1728
+    },
+    {
+      "generation": 34,
+      "best_fitness": 6.1887,
+      "mean_fitness": -13.1057,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 35,
+      "best_fitness": 2.2401,
+      "mean_fitness": -15.735,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1735
+    },
+    {
+      "generation": 36,
+      "best_fitness": -4.9057,
+      "mean_fitness": -13.9002,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1735
+    },
+    {
+      "generation": 37,
+      "best_fitness": 3.5014,
+      "mean_fitness": -11.5688,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1732
+    },
+    {
+      "generation": 38,
+      "best_fitness": 16.7475,
+      "mean_fitness": -11.8534,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 39,
+      "best_fitness": 25.5149,
+      "mean_fitness": -8.6602,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1736
+    },
+    {
+      "generation": 40,
+      "best_fitness": -3.1196,
+      "mean_fitness": -12.6765,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1733
+    },
+    {
+      "generation": 41,
+      "best_fitness": 10.0168,
+      "mean_fitness": -8.0229,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1738
+    },
+    {
+      "generation": 42,
+      "best_fitness": 22.8855,
+      "mean_fitness": -8.0118,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1732
+    },
+    {
+      "generation": 43,
+      "best_fitness": 3.5231,
+      "mean_fitness": -9.0194,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1732
+    },
+    {
+      "generation": 44,
+      "best_fitness": 22.8855,
+      "mean_fitness": -3.9891,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1732
+    },
+    {
+      "generation": 45,
+      "best_fitness": 2.7597,
+      "mean_fitness": -11.4062,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 46,
+      "best_fitness": 2.7597,
+      "mean_fitness": -9.9963,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 47,
+      "best_fitness": 1.3209,
+      "mean_fitness": -10.0815,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 48,
+      "best_fitness": 16.7475,
+      "mean_fitness": -5.7368,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 49,
+      "best_fitness": -4.8087,
+      "mean_fitness": -10.6699,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1736
+    },
+    {
+      "generation": 50,
+      "best_fitness": 10.065,
+      "mean_fitness": -6.4985,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1735
+    },
+    {
+      "generation": 51,
+      "best_fitness": 8.8963,
+      "mean_fitness": -7.6863,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 52,
+      "best_fitness": 15.5858,
+      "mean_fitness": -9.55,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 53,
+      "best_fitness": 11.1645,
+      "mean_fitness": -9.2006,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 54,
+      "best_fitness": 15.7643,
+      "mean_fitness": -13.0094,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1733
+    },
+    {
+      "generation": 55,
+      "best_fitness": 8.9584,
+      "mean_fitness": -7.4948,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1735
+    },
+    {
+      "generation": 56,
+      "best_fitness": 11.329,
+      "mean_fitness": -8.995,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1735
+    },
+    {
+      "generation": 57,
+      "best_fitness": 5.1345,
+      "mean_fitness": -6.8963,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 58,
+      "best_fitness": 19.7059,
+      "mean_fitness": -14.7385,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 59,
+      "best_fitness": 5.1345,
+      "mean_fitness": -19.5937,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 60,
+      "best_fitness": 8.445,
+      "mean_fitness": -7.9722,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 61,
+      "best_fitness": 15.9504,
+      "mean_fitness": -11.7617,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 62,
+      "best_fitness": 15.7643,
+      "mean_fitness": -10.31,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1733
+    },
+    {
+      "generation": 63,
+      "best_fitness": 3.6627,
+      "mean_fitness": -13.2707,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1733
+    },
+    {
+      "generation": 64,
+      "best_fitness": 8.7184,
+      "mean_fitness": -12.3031,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 65,
+      "best_fitness": 8.7184,
+      "mean_fitness": -10.453,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 66,
+      "best_fitness": 16.465,
+      "mean_fitness": -9.83,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1729
+    },
+    {
+      "generation": 67,
+      "best_fitness": -0.5535,
+      "mean_fitness": -13.0768,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1739
+    },
+    {
+      "generation": 68,
+      "best_fitness": 11.9238,
+      "mean_fitness": -10.933,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 69,
+      "best_fitness": 5.1345,
+      "mean_fitness": -7.9116,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 70,
+      "best_fitness": 8.6091,
+      "mean_fitness": -12.7037,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 71,
+      "best_fitness": 18.5415,
+      "mean_fitness": -8.5117,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1738
+    },
+    {
+      "generation": 72,
+      "best_fitness": 17.0062,
+      "mean_fitness": -5.4616,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 73,
+      "best_fitness": 10.1006,
+      "mean_fitness": -6.557,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 74,
+      "best_fitness": 10.0774,
+      "mean_fitness": -10.2827,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1737
+    },
+    {
+      "generation": 75,
+      "best_fitness": 10.0579,
+      "mean_fitness": -6.9592,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 76,
+      "best_fitness": 9.9947,
+      "mean_fitness": -7.336,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1733
+    },
+    {
+      "generation": 77,
+      "best_fitness": 11.9238,
+      "mean_fitness": -10.0509,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 78,
+      "best_fitness": 13.6885,
+      "mean_fitness": -3.8745,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 79,
+      "best_fitness": 8.7184,
+      "mean_fitness": -11.9026,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 80,
+      "best_fitness": 10.0579,
+      "mean_fitness": -9.0533,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 81,
+      "best_fitness": 19.9001,
+      "mean_fitness": -6.1371,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1739
+    },
+    {
+      "generation": 82,
+      "best_fitness": 11.9238,
+      "mean_fitness": -21.9252,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 83,
+      "best_fitness": 10.0009,
+      "mean_fitness": -15.8911,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1732
+    },
+    {
+      "generation": 84,
+      "best_fitness": 8.7184,
+      "mean_fitness": -14.4795,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 85,
+      "best_fitness": -6.5906,
+      "mean_fitness": -14.6939,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1739
+    },
+    {
+      "generation": 86,
+      "best_fitness": 10.0009,
+      "mean_fitness": -11.2481,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1732
+    },
+    {
+      "generation": 87,
+      "best_fitness": -5.1553,
+      "mean_fitness": -14.0189,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 88,
+      "best_fitness": -6.6491,
+      "mean_fitness": -13.4083,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 89,
+      "best_fitness": -4.9091,
+      "mean_fitness": -14.7756,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 90,
+      "best_fitness": 18.5415,
+      "mean_fitness": -10.4594,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1738
+    },
+    {
+      "generation": 91,
+      "best_fitness": 0.371,
+      "mean_fitness": -11.4978,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 92,
+      "best_fitness": 13.5143,
+      "mean_fitness": -6.4396,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1730
+    },
+    {
+      "generation": 93,
+      "best_fitness": 11.9238,
+      "mean_fitness": -7.2681,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 94,
+      "best_fitness": 13.6036,
+      "mean_fitness": -2.5271,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1731
+    },
+    {
+      "generation": 95,
+      "best_fitness": 13.6036,
+      "mean_fitness": -2.7087,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1731
+    },
+    {
+      "generation": 96,
+      "best_fitness": 8.6807,
+      "mean_fitness": -17.4353,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1731
+    },
+    {
+      "generation": 97,
+      "best_fitness": -4.1402,
+      "mean_fitness": -9.4373,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1732
+    },
+    {
+      "generation": 98,
+      "best_fitness": 6.2118,
+      "mean_fitness": -19.7916,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1740
+    },
+    {
+      "generation": 99,
+      "best_fitness": -4.8531,
+      "mean_fitness": -12.9742,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1740
+    },
+    {
+      "generation": 100,
+      "best_fitness": 10.1081,
+      "mean_fitness": -8.0134,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1731
+    },
+    {
+      "generation": 101,
+      "best_fitness": 14.7335,
+      "mean_fitness": -6.1234,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1735
+    },
+    {
+      "generation": 102,
+      "best_fitness": 4.0957,
+      "mean_fitness": -9.3949,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1732
+    },
+    {
+      "generation": 103,
+      "best_fitness": 14.7261,
+      "mean_fitness": -6.0418,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1731
+    },
+    {
+      "generation": 104,
+      "best_fitness": 14.7261,
+      "mean_fitness": -7.6524,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1731
+    },
+    {
+      "generation": 105,
+      "best_fitness": 16.997,
+      "mean_fitness": -6.3958,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1732
+    },
+    {
+      "generation": 106,
+      "best_fitness": -3.1245,
+      "mean_fitness": -10.7757,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1735
+    },
+    {
+      "generation": 107,
+      "best_fitness": 13.3693,
+      "mean_fitness": -5.1604,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1727
+    },
+    {
+      "generation": 108,
+      "best_fitness": 11.5067,
+      "mean_fitness": -11.6971,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1731
+    },
+    {
+      "generation": 109,
+      "best_fitness": -4.7848,
+      "mean_fitness": -9.0617,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 110,
+      "best_fitness": 9.8857,
+      "mean_fitness": -2.6775,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1727
+    },
+    {
+      "generation": 111,
+      "best_fitness": 6.5096,
+      "mean_fitness": -8.7965,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1727
+    },
+    {
+      "generation": 112,
+      "best_fitness": 10.0846,
+      "mean_fitness": -5.6978,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1727
+    },
+    {
+      "generation": 113,
+      "best_fitness": 5.1718,
+      "mean_fitness": -8.5638,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1727
+    },
+    {
+      "generation": 114,
+      "best_fitness": 14.3385,
+      "mean_fitness": -6.3428,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1729
+    },
+    {
+      "generation": 115,
+      "best_fitness": 16.8415,
+      "mean_fitness": -8.9267,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 116,
+      "best_fitness": -0.9429,
+      "mean_fitness": -12.5777,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1735
+    },
+    {
+      "generation": 117,
+      "best_fitness": 3.9922,
+      "mean_fitness": -12.0187,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1731
+    },
+    {
+      "generation": 118,
+      "best_fitness": 8.1679,
+      "mean_fitness": -6.6768,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1735
+    },
+    {
+      "generation": 119,
+      "best_fitness": 10.0478,
+      "mean_fitness": -1.5372,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1733
+    },
+    {
+      "generation": 120,
+      "best_fitness": 10.0478,
+      "mean_fitness": -5.9733,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1733
+    },
+    {
+      "generation": 121,
+      "best_fitness": 10.0137,
+      "mean_fitness": -7.7598,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1727
+    },
+    {
+      "generation": 122,
+      "best_fitness": 5.7319,
+      "mean_fitness": -4.5071,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1734
+    },
+    {
+      "generation": 123,
+      "best_fitness": 9.1614,
+      "mean_fitness": -5.0383,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1734
+    },
+    {
+      "generation": 124,
+      "best_fitness": -4.8539,
+      "mean_fitness": -10.4548,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 125,
+      "best_fitness": 16.7009,
+      "mean_fitness": -11.4731,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 126,
+      "best_fitness": 14.1347,
+      "mean_fitness": -4.4378,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1736
+    },
+    {
+      "generation": 127,
+      "best_fitness": 10.0807,
+      "mean_fitness": -6.9628,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1737
+    },
+    {
+      "generation": 128,
+      "best_fitness": 9.2073,
+      "mean_fitness": -4.4714,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1735
+    },
+    {
+      "generation": 129,
+      "best_fitness": 3.992,
+      "mean_fitness": -5.4855,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 130,
+      "best_fitness": 10.0478,
+      "mean_fitness": -4.7407,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1733
+    },
+    {
+      "generation": 131,
+      "best_fitness": 9.2073,
+      "mean_fitness": -3.4205,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1735
+    },
+    {
+      "generation": 132,
+      "best_fitness": 12.4013,
+      "mean_fitness": -1.9487,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1729
+    },
+    {
+      "generation": 133,
+      "best_fitness": 16.8916,
+      "mean_fitness": 3.0513,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 134,
+      "best_fitness": 9.164,
+      "mean_fitness": -0.8128,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 135,
+      "best_fitness": 16.8916,
+      "mean_fitness": 0.4982,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 136,
+      "best_fitness": 10.0087,
+      "mean_fitness": 2.1621,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1735
+    },
+    {
+      "generation": 137,
+      "best_fitness": -4.8167,
+      "mean_fitness": -5.5215,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 138,
+      "best_fitness": 14.59,
+      "mean_fitness": -0.6239,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 139,
+      "best_fitness": 6.2792,
+      "mean_fitness": -9.7306,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1730
+    },
+    {
+      "generation": 140,
+      "best_fitness": 14.7634,
+      "mean_fitness": -3.994,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1735
+    },
+    {
+      "generation": 141,
+      "best_fitness": 10.8706,
+      "mean_fitness": -2.6531,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1740
+    },
+    {
+      "generation": 142,
+      "best_fitness": 10.0404,
+      "mean_fitness": -8.9181,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 143,
+      "best_fitness": 9.9994,
+      "mean_fitness": -5.9471,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 144,
+      "best_fitness": 17.8392,
+      "mean_fitness": -7.0049,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 145,
+      "best_fitness": 20.7195,
+      "mean_fitness": -6.0964,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 146,
+      "best_fitness": 13.086,
+      "mean_fitness": -11.6089,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 147,
+      "best_fitness": 20.7195,
+      "mean_fitness": -3.7163,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 148,
+      "best_fitness": 25.2554,
+      "mean_fitness": -13.1492,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1743
+    },
+    {
+      "generation": 149,
+      "best_fitness": 10.1941,
+      "mean_fitness": -7.6139,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1732
+    },
+    {
+      "generation": 150,
+      "best_fitness": 8.7556,
+      "mean_fitness": -6.154,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1730
+    },
+    {
+      "generation": 151,
+      "best_fitness": 25.3734,
+      "mean_fitness": -2.8098,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 152,
+      "best_fitness": 11.0105,
+      "mean_fitness": -4.4413,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1733
+    },
+    {
+      "generation": 153,
+      "best_fitness": 25.4614,
+      "mean_fitness": -0.9299,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1743
+    },
+    {
+      "generation": 154,
+      "best_fitness": 10.077,
+      "mean_fitness": -4.0053,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1741
+    },
+    {
+      "generation": 155,
+      "best_fitness": 13.7253,
+      "mean_fitness": -4.8128,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1741
+    },
+    {
+      "generation": 156,
+      "best_fitness": 13.2978,
+      "mean_fitness": -6.358,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1740
+    },
+    {
+      "generation": 157,
+      "best_fitness": 21.5314,
+      "mean_fitness": -5.7117,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 158,
+      "best_fitness": 14.2208,
+      "mean_fitness": -5.2282,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 159,
+      "best_fitness": 13.7253,
+      "mean_fitness": -5.1189,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1741
+    },
+    {
+      "generation": 160,
+      "best_fitness": 16.4607,
+      "mean_fitness": -6.0715,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 161,
+      "best_fitness": 23.9214,
+      "mean_fitness": -6.6401,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 162,
+      "best_fitness": 13.7253,
+      "mean_fitness": -14.8373,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1741
+    },
+    {
+      "generation": 163,
+      "best_fitness": 13.2683,
+      "mean_fitness": -15.2139,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1737
+    },
+    {
+      "generation": 164,
+      "best_fitness": 20.482,
+      "mean_fitness": -12.8994,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1738
+    },
+    {
+      "generation": 165,
+      "best_fitness": 11.4118,
+      "mean_fitness": -13.0149,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1743
+    },
+    {
+      "generation": 166,
+      "best_fitness": 8.0684,
+      "mean_fitness": -14.1965,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1746
+    },
+    {
+      "generation": 167,
+      "best_fitness": 23.9214,
+      "mean_fitness": -12.0315,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 168,
+      "best_fitness": 15.176,
+      "mean_fitness": -12.229,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 169,
+      "best_fitness": 23.9214,
+      "mean_fitness": -10.284,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 170,
+      "best_fitness": 15.176,
+      "mean_fitness": -16.1043,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 171,
+      "best_fitness": 20.482,
+      "mean_fitness": -14.0705,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1738
+    },
+    {
+      "generation": 172,
+      "best_fitness": 23.9214,
+      "mean_fitness": -11.2487,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1737
+    },
+    {
+      "generation": 173,
+      "best_fitness": 10.457,
+      "mean_fitness": -16.2156,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1742
+    },
+    {
+      "generation": 174,
+      "best_fitness": 13.213,
+      "mean_fitness": -13.6455,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1743
+    },
+    {
+      "generation": 175,
+      "best_fitness": 15.176,
+      "mean_fitness": -13.407,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 176,
+      "best_fitness": 15.057,
+      "mean_fitness": -17.6402,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 177,
+      "best_fitness": 8.6592,
+      "mean_fitness": -16.4924,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1743
+    },
+    {
+      "generation": 178,
+      "best_fitness": 15.9815,
+      "mean_fitness": -15.4049,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1735
+    },
+    {
+      "generation": 179,
+      "best_fitness": 13.213,
+      "mean_fitness": -14.8925,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1743
+    },
+    {
+      "generation": 180,
+      "best_fitness": 15.176,
+      "mean_fitness": -11.4437,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 181,
+      "best_fitness": 15.176,
+      "mean_fitness": -16.1917,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 182,
+      "best_fitness": 19.5184,
+      "mean_fitness": -8.0374,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1730
+    },
+    {
+      "generation": 183,
+      "best_fitness": 24.8422,
+      "mean_fitness": -10.1655,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1743
+    },
+    {
+      "generation": 184,
+      "best_fitness": 19.5184,
+      "mean_fitness": -7.4038,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1730
+    },
+    {
+      "generation": 185,
+      "best_fitness": 27.5517,
+      "mean_fitness": 0.1684,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1746
+    },
+    {
+      "generation": 186,
+      "best_fitness": 27.5517,
+      "mean_fitness": -4.9783,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1746
+    },
+    {
+      "generation": 187,
+      "best_fitness": 25.0332,
+      "mean_fitness": -6.3849,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1741
+    },
+    {
+      "generation": 188,
+      "best_fitness": 13.4952,
+      "mean_fitness": -5.3279,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 189,
+      "best_fitness": 15.148,
+      "mean_fitness": -5.3281,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1746
+    },
+    {
+      "generation": 190,
+      "best_fitness": 25.0332,
+      "mean_fitness": -5.8802,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1741
+    },
+    {
+      "generation": 191,
+      "best_fitness": 14.8178,
+      "mean_fitness": -7.874,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1744
+    },
+    {
+      "generation": 192,
+      "best_fitness": 15.3319,
+      "mean_fitness": -6.0037,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1731
+    },
+    {
+      "generation": 193,
+      "best_fitness": 10.9254,
+      "mean_fitness": -10.5718,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1733
+    },
+    {
+      "generation": 194,
+      "best_fitness": 8.6827,
+      "mean_fitness": -7.2459,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1741
+    },
+    {
+      "generation": 195,
+      "best_fitness": 8.1511,
+      "mean_fitness": -5.2709,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1736
+    },
+    {
+      "generation": 196,
+      "best_fitness": 12.8722,
+      "mean_fitness": -7.0244,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1743
+    },
+    {
+      "generation": 197,
+      "best_fitness": 12.8722,
+      "mean_fitness": -5.8782,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1743
+    },
+    {
+      "generation": 198,
+      "best_fitness": 14.5097,
+      "mean_fitness": -7.9913,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1742
+    },
+    {
+      "generation": 199,
+      "best_fitness": 18.8449,
+      "mean_fitness": -3.465,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 200,
+      "best_fitness": 9.9864,
+      "mean_fitness": -6.0441,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1743
+    },
+    {
+      "generation": 201,
+      "best_fitness": 12.7362,
+      "mean_fitness": -3.938,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 202,
+      "best_fitness": 16.5249,
+      "mean_fitness": -1.0019,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1747
+    },
+    {
+      "generation": 203,
+      "best_fitness": 9.9562,
+      "mean_fitness": -11.1981,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1733
+    },
+    {
+      "generation": 204,
+      "best_fitness": 16.3162,
+      "mean_fitness": -12.0428,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1745
+    },
+    {
+      "generation": 205,
+      "best_fitness": 15.7666,
+      "mean_fitness": -15.0356,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1747
+    },
+    {
+      "generation": 206,
+      "best_fitness": 15.7666,
+      "mean_fitness": -7.2589,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1747
+    },
+    {
+      "generation": 207,
+      "best_fitness": 14.8513,
+      "mean_fitness": -11.803,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1742
+    },
+    {
+      "generation": 208,
+      "best_fitness": 14.8513,
+      "mean_fitness": -9.6372,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1742
+    },
+    {
+      "generation": 209,
+      "best_fitness": 24.1295,
+      "mean_fitness": -7.8387,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 210,
+      "best_fitness": 10.2347,
+      "mean_fitness": -10.807,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 211,
+      "best_fitness": 24.1295,
+      "mean_fitness": -11.7522,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1728
+    },
+    {
+      "generation": 212,
+      "best_fitness": 13.5257,
+      "mean_fitness": -12.1929,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1743
+    },
+    {
+      "generation": 213,
+      "best_fitness": -4.8533,
+      "mean_fitness": -17.5041,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1743
+    },
+    {
+      "generation": 214,
+      "best_fitness": 11.9107,
+      "mean_fitness": -10.6558,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1744
+    },
+    {
+      "generation": 215,
+      "best_fitness": 14.6674,
+      "mean_fitness": -8.9975,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1732
+    },
+    {
+      "generation": 216,
+      "best_fitness": 12.4208,
+      "mean_fitness": -8.676,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1742
+    },
+    {
+      "generation": 217,
+      "best_fitness": 2.2802,
+      "mean_fitness": -10.8257,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1743
+    },
+    {
+      "generation": 218,
+      "best_fitness": 9.8072,
+      "mean_fitness": -8.5571,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1734
+    },
+    {
+      "generation": 219,
+      "best_fitness": 14.6674,
+      "mean_fitness": -8.5125,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1732
+    },
+    {
+      "generation": 220,
+      "best_fitness": 13.7407,
+      "mean_fitness": -7.8348,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1744
+    },
+    {
+      "generation": 221,
+      "best_fitness": 8.608,
+      "mean_fitness": -9.3616,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1743
+    },
+    {
+      "generation": 222,
+      "best_fitness": -4.8584,
+      "mean_fitness": -11.1357,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1743
+    },
+    {
+      "generation": 223,
+      "best_fitness": 10.021,
+      "mean_fitness": -13.7151,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1745
+    },
+    {
+      "generation": 224,
+      "best_fitness": -4.8673,
+      "mean_fitness": -16.6192,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1745
+    },
+    {
+      "generation": 225,
+      "best_fitness": -5.527,
+      "mean_fitness": -12.8714,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1730
+    },
+    {
+      "generation": 226,
+      "best_fitness": 4.8404,
+      "mean_fitness": -8.9096,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1746
+    },
+    {
+      "generation": 227,
+      "best_fitness": -0.0476,
+      "mean_fitness": -9.1994,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1727
+    },
+    {
+      "generation": 228,
+      "best_fitness": -4.7191,
+      "mean_fitness": -11.4414,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1727
+    },
+    {
+      "generation": 229,
+      "best_fitness": 4.8385,
+      "mean_fitness": -4.2708,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1730
+    },
+    {
+      "generation": 230,
+      "best_fitness": 4.0467,
+      "mean_fitness": -7.1944,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1733
+    },
+    {
+      "generation": 231,
+      "best_fitness": 9.156,
+      "mean_fitness": -23.6459,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1723
+    },
+    {
+      "generation": 232,
+      "best_fitness": 11.6545,
+      "mean_fitness": -7.1042,
+      "num_species": 1,
+      "best_nodes": 3,
+      "best_connections": 1723
+    },
+    {
+      "generation": 233,
+      "best_fitness": 3.6293,
+      "mean_fitness": -13.7286,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1733
+    },
+    {
+      "generation": 234,
+      "best_fitness": -6.5809,
+      "mean_fitness": -19.6061,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1737
+    },
+    {
+      "generation": 235,
+      "best_fitness": 4.3722,
+      "mean_fitness": -7.2441,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1726
+    },
+    {
+      "generation": 236,
+      "best_fitness": -0.1527,
+      "mean_fitness": -18.8417,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1733
+    },
+    {
+      "generation": 237,
+      "best_fitness": 4.2035,
+      "mean_fitness": -15.0792,
+      "num_species": 1,
+      "best_nodes": 4,
+      "best_connections": 1726
+    },
+    {
+      "generation": 238,
+      "best_fitness": 11.7991,
+      "mean_fitness": -12.9851,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1747
+    },
+    {
+      "generation": 239,
+      "best_fitness": 8.625,
+      "mean_fitness": -14.672,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1729
+    },
+    {
+      "generation": 240,
+      "best_fitness": 8.6953,
+      "mean_fitness": -7.6456,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1747
+    },
+    {
+      "generation": 241,
+      "best_fitness": 8.2603,
+      "mean_fitness": -8.2438,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1728
+    },
+    {
+      "generation": 242,
+      "best_fitness": -0.1527,
+      "mean_fitness": -22.3342,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1733
+    },
+    {
+      "generation": 243,
+      "best_fitness": -5.486,
+      "mean_fitness": -13.1567,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1726
+    },
+    {
+      "generation": 244,
+      "best_fitness": 18.1434,
+      "mean_fitness": -10.1275,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 245,
+      "best_fitness": 18.1434,
+      "mean_fitness": -7.8261,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 246,
+      "best_fitness": 18.1434,
+      "mean_fitness": -9.2136,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 247,
+      "best_fitness": -6.6425,
+      "mean_fitness": -29.1996,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1736
+    },
+    {
+      "generation": 248,
+      "best_fitness": 6.4684,
+      "mean_fitness": -27.4997,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1730
+    },
+    {
+      "generation": 249,
+      "best_fitness": 1.3739,
+      "mean_fitness": -26.6614,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1726
+    },
+    {
+      "generation": 250,
+      "best_fitness": 18.3307,
+      "mean_fitness": -28.0394,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1725
+    },
+    {
+      "generation": 251,
+      "best_fitness": 3.5531,
+      "mean_fitness": -30.9193,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1730
+    },
+    {
+      "generation": 252,
+      "best_fitness": -4.7402,
+      "mean_fitness": -29.6199,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1742
+    },
+    {
+      "generation": 253,
+      "best_fitness": 8.5474,
+      "mean_fitness": -23.2176,
+      "num_species": 1,
+      "best_nodes": 7,
+      "best_connections": 1731
+    },
+    {
+      "generation": 254,
+      "best_fitness": 19.24,
+      "mean_fitness": -26.5802,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1732
+    },
+    {
+      "generation": 255,
+      "best_fitness": 19.24,
+      "mean_fitness": -28.3651,
+      "num_species": 1,
+      "best_nodes": 8,
+      "best_connections": 1732
+    },
+    {
+      "generation": 256,
+      "best_fitness": 9.5095,
+      "mean_fitness": -27.9348,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1729
+    },
+    {
+      "generation": 257,
+      "best_fitness": -4.4559,
+      "mean_fitness": -27.3997,
+      "num_species": 1,
+      "best_nodes": 11,
+      "best_connections": 1744
+    },
+    {
+      "generation": 258,
+      "best_fitness": 10.7557,
+      "mean_fitness": -22.4402,
+      "num_species": 1,
+      "best_nodes": 11,
+      "best_connections": 1745
+    },
+    {
+      "generation": 259,
+      "best_fitness": 11.0524,
+      "mean_fitness": -21.1483,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1730
+    },
+    {
+      "generation": 260,
+      "best_fitness": 10.7557,
+      "mean_fitness": -22.8974,
+      "num_species": 1,
+      "best_nodes": 11,
+      "best_connections": 1745
+    },
+    {
+      "generation": 261,
+      "best_fitness": 10.007,
+      "mean_fitness": -25.0922,
+      "num_species": 1,
+      "best_nodes": 12,
+      "best_connections": 1746
+    },
+    {
+      "generation": 262,
+      "best_fitness": 10.007,
+      "mean_fitness": -24.3103,
+      "num_species": 1,
+      "best_nodes": 12,
+      "best_connections": 1746
+    },
+    {
+      "generation": 263,
+      "best_fitness": 19.9266,
+      "mean_fitness": -19.2319,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1732
+    },
+    {
+      "generation": 264,
+      "best_fitness": 12.7039,
+      "mean_fitness": -21.0922,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1733
+    },
+    {
+      "generation": 265,
+      "best_fitness": 8.4068,
+      "mean_fitness": -26.3257,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 266,
+      "best_fitness": -5.8916,
+      "mean_fitness": -32.5768,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1734
+    },
+    {
+      "generation": 267,
+      "best_fitness": -4.8652,
+      "mean_fitness": -12.4613,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1729
+    },
+    {
+      "generation": 268,
+      "best_fitness": 11.8378,
+      "mean_fitness": -10.3034,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1728
+    },
+    {
+      "generation": 269,
+      "best_fitness": 8.249,
+      "mean_fitness": -3.2873,
+      "num_species": 1,
+      "best_nodes": 5,
+      "best_connections": 1727
+    },
+    {
+      "generation": 270,
+      "best_fitness": 0.1301,
+      "mean_fitness": -21.9496,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1748
+    },
+    {
+      "generation": 271,
+      "best_fitness": 5.0158,
+      "mean_fitness": -14.2345,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1729
+    },
+    {
+      "generation": 272,
+      "best_fitness": 19.8286,
+      "mean_fitness": -14.6256,
+      "num_species": 1,
+      "best_nodes": 6,
+      "best_connections": 1729
+    },
+    {
+      "generation": 273,
+      "best_fitness": 14.3548,
+      "mean_fitness": -13.6132,
+      "num_species": 1,
+      "best_nodes": 12,
+      "best_connections": 1748
+    },
+    {
+      "generation": 274,
+      "best_fitness": 0.4022,
+      "mean_fitness": -13.7303,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1736
+    },
+    {
+      "generation": 275,
+      "best_fitness": -3.1658,
+      "mean_fitness": -12.8389,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1735
+    },
+    {
+      "generation": 276,
+      "best_fitness": 13.7057,
+      "mean_fitness": -16.5581,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1739
+    },
+    {
+      "generation": 277,
+      "best_fitness": 2.3801,
+      "mean_fitness": -17.6355,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1735
+    },
+    {
+      "generation": 278,
+      "best_fitness": 10.0426,
+      "mean_fitness": -11.9777,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1736
+    },
+    {
+      "generation": 279,
+      "best_fitness": 5.9478,
+      "mean_fitness": -14.0523,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1748
+    },
+    {
+      "generation": 280,
+      "best_fitness": -3.1471,
+      "mean_fitness": -16.9346,
+      "num_species": 1,
+      "best_nodes": 10,
+      "best_connections": 1740
+    },
+    {
+      "generation": 281,
+      "best_fitness": 14.0406,
+      "mean_fitness": -14.0009,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1747
+    },
+    {
+      "generation": 282,
+      "best_fitness": 5.4517,
+      "mean_fitness": -18.0712,
+      "num_species": 1,
+      "best_nodes": 13,
+      "best_connections": 1751
+    },
+    {
+      "generation": 283,
+      "best_fitness": -6.0411,
+      "mean_fitness": -13.6538,
+      "num_species": 1,
+      "best_nodes": 13,
+      "best_connections": 1751
+    },
+    {
+      "generation": 284,
+      "best_fitness": 5.4517,
+      "mean_fitness": -9.4914,
+      "num_species": 1,
+      "best_nodes": 13,
+      "best_connections": 1751
+    },
+    {
+      "generation": 285,
+      "best_fitness": -4.256,
+      "mean_fitness": -10.3757,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1737
+    },
+    {
+      "generation": 286,
+      "best_fitness": 5.4517,
+      "mean_fitness": -14.0582,
+      "num_species": 1,
+      "best_nodes": 13,
+      "best_connections": 1751
+    },
+    {
+      "generation": 287,
+      "best_fitness": 2.5128,
+      "mean_fitness": -11.0845,
+      "num_species": 1,
+      "best_nodes": 9,
+      "best_connections": 1737
+    },
+    {
+      "generation": 288,
+      "best_fitness": 3.7758,
+      "mean_fitness": -12.8819,
+      "num_species": 1,
+      "best_nodes": 12,
+      "best_connections": 1748
+    },
+    {
+      "generation": 289,
+      "best_fitness": -1.9101,
+      "mean_fitness": -12.8575,
+      "num_species": 1,
+      "best_nodes": 13,
+      "best_connections": 1746
+    },
+    {
+      "generation": 290,
+      "best_fitness": 4.6028,
+      "mean_fitness": -11.2056,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1749
+    },
+    {
+      "generation": 291,
+      "best_fitness": 14.7002,
+      "mean_fitness": -14.6449,
+      "num_species": 1,
+      "best_nodes": 11,
+      "best_connections": 1742
+    },
+    {
+      "generation": 292,
+      "best_fitness": 2.9413,
+      "mean_fitness": -12.7589,
+      "num_species": 1,
+      "best_nodes": 11,
+      "best_connections": 1741
+    },
+    {
+      "generation": 293,
+      "best_fitness": 3.2811,
+      "mean_fitness": -12.6923,
+      "num_species": 1,
+      "best_nodes": 13,
+      "best_connections": 1746
+    },
+    {
+      "generation": 294,
+      "best_fitness": 14.7002,
+      "mean_fitness": -7.8044,
+      "num_species": 1,
+      "best_nodes": 11,
+      "best_connections": 1742
+    },
+    {
+      "generation": 295,
+      "best_fitness": 10.4207,
+      "mean_fitness": -5.774,
+      "num_species": 1,
+      "best_nodes": 13,
+      "best_connections": 1753
+    },
+    {
+      "generation": 296,
+      "best_fitness": 14.7002,
+      "mean_fitness": -1.7887,
+      "num_species": 1,
+      "best_nodes": 11,
+      "best_connections": 1742
+    },
+    {
+      "generation": 297,
+      "best_fitness": 9.8928,
+      "mean_fitness": -9.4805,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1755
+    },
+    {
+      "generation": 298,
+      "best_fitness": 9.8928,
+      "mean_fitness": -3.9948,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1755
+    },
+    {
+      "generation": 299,
+      "best_fitness": 25.3403,
+      "mean_fitness": -7.1773,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1755
+    },
+    {
+      "generation": 300,
+      "best_fitness": -4.7535,
+      "mean_fitness": -7.5411,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1755
+    },
+    {
+      "generation": 301,
+      "best_fitness": -6.6074,
+      "mean_fitness": -9.8242,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1758
+    },
+    {
+      "generation": 302,
+      "best_fitness": -1.8662,
+      "mean_fitness": -6.7057,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1750
+    },
+    {
+      "generation": 303,
+      "best_fitness": 2.7369,
+      "mean_fitness": -5.1456,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1754
+    },
+    {
+      "generation": 304,
+      "best_fitness": -4.3041,
+      "mean_fitness": -30.1736,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1751
+    },
+    {
+      "generation": 305,
+      "best_fitness": 6.2711,
+      "mean_fitness": -10.8344,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1749
+    },
+    {
+      "generation": 306,
+      "best_fitness": 8.5672,
+      "mean_fitness": -5.502,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1758
+    },
+    {
+      "generation": 307,
+      "best_fitness": 12.871,
+      "mean_fitness": -8.2461,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1758
+    },
+    {
+      "generation": 308,
+      "best_fitness": 15.3853,
+      "mean_fitness": -11.6031,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1753
+    },
+    {
+      "generation": 309,
+      "best_fitness": 14.5183,
+      "mean_fitness": -7.169,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1754
+    },
+    {
+      "generation": 310,
+      "best_fitness": 3.7977,
+      "mean_fitness": -9.0041,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1757
+    },
+    {
+      "generation": 311,
+      "best_fitness": 0.3053,
+      "mean_fitness": -24.6812,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1753
+    },
+    {
+      "generation": 312,
+      "best_fitness": -4.9211,
+      "mean_fitness": -24.3566,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1758
+    },
+    {
+      "generation": 313,
+      "best_fitness": 12.0906,
+      "mean_fitness": -21.7152,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1755
+    },
+    {
+      "generation": 314,
+      "best_fitness": 12.0906,
+      "mean_fitness": -21.5095,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1755
+    },
+    {
+      "generation": 315,
+      "best_fitness": -4.7994,
+      "mean_fitness": -23.2444,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1755
+    },
+    {
+      "generation": 316,
+      "best_fitness": 0.3713,
+      "mean_fitness": -25.5988,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1754
+    },
+    {
+      "generation": 317,
+      "best_fitness": 12.2947,
+      "mean_fitness": -17.8207,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1756
+    },
+    {
+      "generation": 318,
+      "best_fitness": 1.7313,
+      "mean_fitness": -21.7522,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1753
+    },
+    {
+      "generation": 319,
+      "best_fitness": -4.8268,
+      "mean_fitness": -17.5454,
+      "num_species": 1,
+      "best_nodes": 17,
+      "best_connections": 1758
+    },
+    {
+      "generation": 320,
+      "best_fitness": 1.4483,
+      "mean_fitness": -22.9569,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1761
+    },
+    {
+      "generation": 321,
+      "best_fitness": 8.1973,
+      "mean_fitness": -24.4119,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1756
+    },
+    {
+      "generation": 322,
+      "best_fitness": 24.3136,
+      "mean_fitness": -19.4746,
+      "num_species": 1,
+      "best_nodes": 17,
+      "best_connections": 1758
+    },
+    {
+      "generation": 323,
+      "best_fitness": 24.3136,
+      "mean_fitness": -13.9899,
+      "num_species": 1,
+      "best_nodes": 17,
+      "best_connections": 1758
+    },
+    {
+      "generation": 324,
+      "best_fitness": 7.4229,
+      "mean_fitness": -14.6671,
+      "num_species": 1,
+      "best_nodes": 17,
+      "best_connections": 1759
+    },
+    {
+      "generation": 325,
+      "best_fitness": 19.3416,
+      "mean_fitness": -12.4434,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1762
+    },
+    {
+      "generation": 326,
+      "best_fitness": 19.3416,
+      "mean_fitness": -9.6293,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1762
+    },
+    {
+      "generation": 327,
+      "best_fitness": 8.1973,
+      "mean_fitness": -8.9159,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1756
+    },
+    {
+      "generation": 328,
+      "best_fitness": 8.9887,
+      "mean_fitness": -11.5399,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1755
+    },
+    {
+      "generation": 329,
+      "best_fitness": 11.8815,
+      "mean_fitness": -10.6572,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1758
+    },
+    {
+      "generation": 330,
+      "best_fitness": 24.3136,
+      "mean_fitness": -12.5618,
+      "num_species": 1,
+      "best_nodes": 17,
+      "best_connections": 1758
+    },
+    {
+      "generation": 331,
+      "best_fitness": 9.97,
+      "mean_fitness": -9.6531,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1758
+    },
+    {
+      "generation": 332,
+      "best_fitness": 6.2856,
+      "mean_fitness": -11.882,
+      "num_species": 1,
+      "best_nodes": 17,
+      "best_connections": 1758
+    },
+    {
+      "generation": 333,
+      "best_fitness": 9.6236,
+      "mean_fitness": -9.8505,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1757
+    },
+    {
+      "generation": 334,
+      "best_fitness": 9.736,
+      "mean_fitness": -9.3663,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1757
+    },
+    {
+      "generation": 335,
+      "best_fitness": -1.8578,
+      "mean_fitness": -9.8958,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1758
+    },
+    {
+      "generation": 336,
+      "best_fitness": 8.323,
+      "mean_fitness": -9.0842,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1757
+    },
+    {
+      "generation": 337,
+      "best_fitness": -0.8699,
+      "mean_fitness": -10.7148,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1759
+    },
+    {
+      "generation": 338,
+      "best_fitness": 21.4612,
+      "mean_fitness": -11.2662,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 339,
+      "best_fitness": 21.4612,
+      "mean_fitness": -10.5577,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 340,
+      "best_fitness": 21.4612,
+      "mean_fitness": -7.6139,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 341,
+      "best_fitness": 21.4612,
+      "mean_fitness": -13.6564,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 342,
+      "best_fitness": 8.4428,
+      "mean_fitness": -9.2003,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 343,
+      "best_fitness": -4.8565,
+      "mean_fitness": -12.549,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1764
+    },
+    {
+      "generation": 344,
+      "best_fitness": 10.0862,
+      "mean_fitness": -11.5411,
+      "num_species": 1,
+      "best_nodes": 17,
+      "best_connections": 1766
+    },
+    {
+      "generation": 345,
+      "best_fitness": 0.7405,
+      "mean_fitness": -11.014,
+      "num_species": 1,
+      "best_nodes": 17,
+      "best_connections": 1767
+    },
+    {
+      "generation": 346,
+      "best_fitness": 21.4612,
+      "mean_fitness": -5.293,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 347,
+      "best_fitness": -4.8568,
+      "mean_fitness": -16.2025,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 348,
+      "best_fitness": 4.1543,
+      "mean_fitness": -14.4001,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1762
+    },
+    {
+      "generation": 349,
+      "best_fitness": -4.7818,
+      "mean_fitness": -12.6231,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1770
+    },
+    {
+      "generation": 350,
+      "best_fitness": 13.4583,
+      "mean_fitness": -8.7578,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1770
+    },
+    {
+      "generation": 351,
+      "best_fitness": 1.3671,
+      "mean_fitness": -9.4317,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1764
+    },
+    {
+      "generation": 352,
+      "best_fitness": 21.4612,
+      "mean_fitness": -4.1813,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 353,
+      "best_fitness": 21.4612,
+      "mean_fitness": -10.8308,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 354,
+      "best_fitness": 21.4612,
+      "mean_fitness": -8.6784,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1761
+    },
+    {
+      "generation": 355,
+      "best_fitness": 6.1609,
+      "mean_fitness": -7.3247,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1771
+    },
+    {
+      "generation": 356,
+      "best_fitness": -4.1493,
+      "mean_fitness": -7.6871,
+      "num_species": 1,
+      "best_nodes": 16,
+      "best_connections": 1758
+    },
+    {
+      "generation": 357,
+      "best_fitness": 9.9892,
+      "mean_fitness": -7.2001,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1773
+    },
+    {
+      "generation": 358,
+      "best_fitness": -4.8348,
+      "mean_fitness": -7.556,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1773
+    },
+    {
+      "generation": 359,
+      "best_fitness": 10.0039,
+      "mean_fitness": -1.6315,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1773
+    },
+    {
+      "generation": 360,
+      "best_fitness": 15.5618,
+      "mean_fitness": -0.6301,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1768
+    },
+    {
+      "generation": 361,
+      "best_fitness": 21.0772,
+      "mean_fitness": -0.9038,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1762
+    },
+    {
+      "generation": 362,
+      "best_fitness": 21.0772,
+      "mean_fitness": 1.0906,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1762
+    },
+    {
+      "generation": 363,
+      "best_fitness": 21.0772,
+      "mean_fitness": -5.3506,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1762
+    },
+    {
+      "generation": 364,
+      "best_fitness": 18.5483,
+      "mean_fitness": -2.6198,
+      "num_species": 1,
+      "best_nodes": 15,
+      "best_connections": 1765
+    },
+    {
+      "generation": 365,
+      "best_fitness": -4.8235,
+      "mean_fitness": -9.2557,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1762
+    },
+    {
+      "generation": 366,
+      "best_fitness": -3.0706,
+      "mean_fitness": -10.2069,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1763
+    },
+    {
+      "generation": 367,
+      "best_fitness": -3.0706,
+      "mean_fitness": -14.0434,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1763
+    },
+    {
+      "generation": 368,
+      "best_fitness": -4.8594,
+      "mean_fitness": -26.1337,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1764
+    },
+    {
+      "generation": 369,
+      "best_fitness": 19.2136,
+      "mean_fitness": -17.9682,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1776
+    },
+    {
+      "generation": 370,
+      "best_fitness": -4.727,
+      "mean_fitness": -26.72,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1776
+    },
+    {
+      "generation": 371,
+      "best_fitness": -4.8186,
+      "mean_fitness": -24.5403,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1769
+    },
+    {
+      "generation": 372,
+      "best_fitness": 5.8015,
+      "mean_fitness": -24.522,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1764
+    },
+    {
+      "generation": 373,
+      "best_fitness": 17.4406,
+      "mean_fitness": -19.8286,
+      "num_species": 1,
+      "best_nodes": 14,
+      "best_connections": 1763
+    },
+    {
+      "generation": 374,
+      "best_fitness": 15.5618,
+      "mean_fitness": -14.4499,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1768
+    },
+    {
+      "generation": 375,
+      "best_fitness": -5.0086,
+      "mean_fitness": -13.3064,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1770
+    },
+    {
+      "generation": 376,
+      "best_fitness": 24.3184,
+      "mean_fitness": -9.9867,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1779
+    },
+    {
+      "generation": 377,
+      "best_fitness": 8.2599,
+      "mean_fitness": -11.2661,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1770
+    },
+    {
+      "generation": 378,
+      "best_fitness": -1.0871,
+      "mean_fitness": -12.7666,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1769
+    },
+    {
+      "generation": 379,
+      "best_fitness": 8.4669,
+      "mean_fitness": -8.7411,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1779
+    },
+    {
+      "generation": 380,
+      "best_fitness": 24.1533,
+      "mean_fitness": -7.9048,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1780
+    },
+    {
+      "generation": 381,
+      "best_fitness": 24.1533,
+      "mean_fitness": -13.0971,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1780
+    },
+    {
+      "generation": 382,
+      "best_fitness": 24.3184,
+      "mean_fitness": -2.3468,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1779
+    },
+    {
+      "generation": 383,
+      "best_fitness": 17.9717,
+      "mean_fitness": -8.252,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1779
+    },
+    {
+      "generation": 384,
+      "best_fitness": -6.5499,
+      "mean_fitness": -11.2273,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1782
+    },
+    {
+      "generation": 385,
+      "best_fitness": 26.1628,
+      "mean_fitness": -10.1614,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1773
+    },
+    {
+      "generation": 386,
+      "best_fitness": -6.5499,
+      "mean_fitness": -13.7697,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1782
+    },
+    {
+      "generation": 387,
+      "best_fitness": -6.5499,
+      "mean_fitness": -12.6744,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1782
+    },
+    {
+      "generation": 388,
+      "best_fitness": 2.4627,
+      "mean_fitness": -8.7933,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 389,
+      "best_fitness": 21.6266,
+      "mean_fitness": -3.0318,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1784
+    },
+    {
+      "generation": 390,
+      "best_fitness": 26.0985,
+      "mean_fitness": -6.6688,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 391,
+      "best_fitness": 16.2855,
+      "mean_fitness": -12.2251,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1776
+    },
+    {
+      "generation": 392,
+      "best_fitness": 3.7112,
+      "mean_fitness": -11.3007,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1782
+    },
+    {
+      "generation": 393,
+      "best_fitness": 14.4592,
+      "mean_fitness": -10.1363,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1780
+    },
+    {
+      "generation": 394,
+      "best_fitness": 15.2579,
+      "mean_fitness": -8.3867,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1775
+    },
+    {
+      "generation": 395,
+      "best_fitness": 374.5223,
+      "mean_fitness": 27.2649,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1783
+    },
+    {
+      "generation": 396,
+      "best_fitness": 3.7112,
+      "mean_fitness": -9.5144,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1782
+    },
+    {
+      "generation": 397,
+      "best_fitness": 11.0542,
+      "mean_fitness": -10.8264,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1783
+    },
+    {
+      "generation": 398,
+      "best_fitness": 17.2744,
+      "mean_fitness": -9.3286,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1771
+    },
+    {
+      "generation": 399,
+      "best_fitness": 0.7071,
+      "mean_fitness": -8.9355,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1784
+    },
+    {
+      "generation": 400,
+      "best_fitness": 17.2744,
+      "mean_fitness": -5.6639,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1771
+    },
+    {
+      "generation": 401,
+      "best_fitness": 23.4966,
+      "mean_fitness": -4.91,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1775
+    },
+    {
+      "generation": 402,
+      "best_fitness": 26.0985,
+      "mean_fitness": -10.2221,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 403,
+      "best_fitness": 10.0251,
+      "mean_fitness": -7.1811,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1775
+    },
+    {
+      "generation": 404,
+      "best_fitness": 25.891,
+      "mean_fitness": -5.7262,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1775
+    },
+    {
+      "generation": 405,
+      "best_fitness": 25.891,
+      "mean_fitness": -1.7719,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1775
+    },
+    {
+      "generation": 406,
+      "best_fitness": 26.0985,
+      "mean_fitness": -5.9017,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 407,
+      "best_fitness": -4.721,
+      "mean_fitness": -9.4258,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1775
+    },
+    {
+      "generation": 408,
+      "best_fitness": 25.891,
+      "mean_fitness": -2.7683,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1775
+    },
+    {
+      "generation": 409,
+      "best_fitness": 3.8734,
+      "mean_fitness": -6.9648,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1777
+    },
+    {
+      "generation": 410,
+      "best_fitness": 13.5053,
+      "mean_fitness": -2.1817,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1791
+    },
+    {
+      "generation": 411,
+      "best_fitness": 7.6428,
+      "mean_fitness": -2.3221,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1790
+    },
+    {
+      "generation": 412,
+      "best_fitness": 14.4216,
+      "mean_fitness": -4.49,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1791
+    },
+    {
+      "generation": 413,
+      "best_fitness": -4.8204,
+      "mean_fitness": -13.6423,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 414,
+      "best_fitness": 13.3256,
+      "mean_fitness": -6.4025,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1784
+    },
+    {
+      "generation": 415,
+      "best_fitness": 3.6168,
+      "mean_fitness": -6.2524,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1783
+    },
+    {
+      "generation": 416,
+      "best_fitness": 2.1599,
+      "mean_fitness": -8.3543,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1776
+    },
+    {
+      "generation": 417,
+      "best_fitness": -4.7339,
+      "mean_fitness": -8.6876,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1786
+    },
+    {
+      "generation": 418,
+      "best_fitness": 6.2913,
+      "mean_fitness": -6.0601,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1788
+    },
+    {
+      "generation": 419,
+      "best_fitness": 6.2913,
+      "mean_fitness": -33.2905,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1788
+    },
+    {
+      "generation": 420,
+      "best_fitness": -4.8499,
+      "mean_fitness": -31.1797,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 421,
+      "best_fitness": -6.4376,
+      "mean_fitness": -33.2954,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1788
+    },
+    {
+      "generation": 422,
+      "best_fitness": -4.8499,
+      "mean_fitness": -30.0641,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 423,
+      "best_fitness": -0.0259,
+      "mean_fitness": -23.173,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1777
+    },
+    {
+      "generation": 424,
+      "best_fitness": 16.6627,
+      "mean_fitness": -6.6346,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1769
+    },
+    {
+      "generation": 425,
+      "best_fitness": 9.3535,
+      "mean_fitness": -11.3044,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1788
+    },
+    {
+      "generation": 426,
+      "best_fitness": 3.8037,
+      "mean_fitness": -11.1364,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 427,
+      "best_fitness": 8.7962,
+      "mean_fitness": -12.7454,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1771
+    },
+    {
+      "generation": 428,
+      "best_fitness": 24.0454,
+      "mean_fitness": -5.9728,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1788
+    },
+    {
+      "generation": 429,
+      "best_fitness": -8.1498,
+      "mean_fitness": -11.6125,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1789
+    },
+    {
+      "generation": 430,
+      "best_fitness": -3.1085,
+      "mean_fitness": -8.1469,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1766
+    },
+    {
+      "generation": 431,
+      "best_fitness": 7.1057,
+      "mean_fitness": -10.6026,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 432,
+      "best_fitness": -3.1085,
+      "mean_fitness": -10.5801,
+      "num_species": 1,
+      "best_nodes": 18,
+      "best_connections": 1766
+    },
+    {
+      "generation": 433,
+      "best_fitness": -6.5508,
+      "mean_fitness": -11.2762,
+      "num_species": 1,
+      "best_nodes": 19,
+      "best_connections": 1774
+    },
+    {
+      "generation": 434,
+      "best_fitness": 9.8424,
+      "mean_fitness": -3.3179,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1789
+    },
+    {
+      "generation": 435,
+      "best_fitness": 8.7962,
+      "mean_fitness": -2.8983,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1771
+    },
+    {
+      "generation": 436,
+      "best_fitness": 8.5142,
+      "mean_fitness": -10.3923,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1791
+    },
+    {
+      "generation": 437,
+      "best_fitness": -6.6285,
+      "mean_fitness": -14.506,
+      "num_species": 1,
+      "best_nodes": 20,
+      "best_connections": 1771
+    },
+    {
+      "generation": 438,
+      "best_fitness": 12.5738,
+      "mean_fitness": -8.5769,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1795
+    },
+    {
+      "generation": 439,
+      "best_fitness": 8.6256,
+      "mean_fitness": -4.2673,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1793
+    },
+    {
+      "generation": 440,
+      "best_fitness": 8.9261,
+      "mean_fitness": -13.0392,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1796
+    },
+    {
+      "generation": 441,
+      "best_fitness": -5.0684,
+      "mean_fitness": -15.9029,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1793
+    },
+    {
+      "generation": 442,
+      "best_fitness": 11.9321,
+      "mean_fitness": -9.069,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1798
+    },
+    {
+      "generation": 443,
+      "best_fitness": -6.2341,
+      "mean_fitness": -14.6733,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1773
+    },
+    {
+      "generation": 444,
+      "best_fitness": 25.6478,
+      "mean_fitness": -11.0088,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1773
+    },
+    {
+      "generation": 445,
+      "best_fitness": 8.6926,
+      "mean_fitness": -13.0776,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1795
+    },
+    {
+      "generation": 446,
+      "best_fitness": 8.8171,
+      "mean_fitness": -9.3227,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1796
+    },
+    {
+      "generation": 447,
+      "best_fitness": 13.5237,
+      "mean_fitness": -13.8328,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1792
+    },
+    {
+      "generation": 448,
+      "best_fitness": 25.6478,
+      "mean_fitness": -10.6001,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1773
+    },
+    {
+      "generation": 449,
+      "best_fitness": 25.996,
+      "mean_fitness": -9.5412,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1775
+    },
+    {
+      "generation": 450,
+      "best_fitness": -4.7584,
+      "mean_fitness": -11.2984,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 451,
+      "best_fitness": 25.6478,
+      "mean_fitness": -6.8988,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1773
+    },
+    {
+      "generation": 452,
+      "best_fitness": -1.2205,
+      "mean_fitness": -8.9449,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1790
+    },
+    {
+      "generation": 453,
+      "best_fitness": -4.9197,
+      "mean_fitness": -23.2474,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1773
+    },
+    {
+      "generation": 454,
+      "best_fitness": -6.5252,
+      "mean_fitness": -14.5046,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 455,
+      "best_fitness": 10.1932,
+      "mean_fitness": -5.7752,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 456,
+      "best_fitness": 21.8409,
+      "mean_fitness": -5.8568,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1773
+    },
+    {
+      "generation": 457,
+      "best_fitness": 21.8409,
+      "mean_fitness": -5.2339,
+      "num_species": 1,
+      "best_nodes": 21,
+      "best_connections": 1773
+    },
+    {
+      "generation": 458,
+      "best_fitness": 9.8346,
+      "mean_fitness": -8.3426,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1790
+    },
+    {
+      "generation": 459,
+      "best_fitness": -4.8415,
+      "mean_fitness": -12.2737,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 460,
+      "best_fitness": -4.8088,
+      "mean_fitness": -10.6394,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 461,
+      "best_fitness": -4.8415,
+      "mean_fitness": -12.2827,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 462,
+      "best_fitness": -4.8801,
+      "mean_fitness": -13.6965,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1775
+    },
+    {
+      "generation": 463,
+      "best_fitness": -4.8934,
+      "mean_fitness": -13.2839,
+      "num_species": 1,
+      "best_nodes": 22,
+      "best_connections": 1775
+    },
+    {
+      "generation": 464,
+      "best_fitness": -6.5252,
+      "mean_fitness": -11.5073,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 465,
+      "best_fitness": -4.7584,
+      "mean_fitness": -8.5229,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 466,
+      "best_fitness": 13.7931,
+      "mean_fitness": -5.2569,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1798
+    },
+    {
+      "generation": 467,
+      "best_fitness": 3.5235,
+      "mean_fitness": -6.9489,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1779
+    },
+    {
+      "generation": 468,
+      "best_fitness": 9.9547,
+      "mean_fitness": -9.1983,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1779
+    },
+    {
+      "generation": 469,
+      "best_fitness": -4.7783,
+      "mean_fitness": -11.4284,
+      "num_species": 1,
+      "best_nodes": 23,
+      "best_connections": 1777
+    },
+    {
+      "generation": 470,
+      "best_fitness": 6.8753,
+      "mean_fitness": -5.2233,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1795
+    },
+    {
+      "generation": 471,
+      "best_fitness": 19.5477,
+      "mean_fitness": -4.5464,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1781
+    },
+    {
+      "generation": 472,
+      "best_fitness": 10.8894,
+      "mean_fitness": -4.1,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1795
+    },
+    {
+      "generation": 473,
+      "best_fitness": -4.8867,
+      "mean_fitness": -8.6222,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1802
+    },
+    {
+      "generation": 474,
+      "best_fitness": 8.1286,
+      "mean_fitness": -6.0277,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1795
+    },
+    {
+      "generation": 475,
+      "best_fitness": 6.8435,
+      "mean_fitness": -6.001,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1797
+    },
+    {
+      "generation": 476,
+      "best_fitness": 0.4059,
+      "mean_fitness": -5.6086,
+      "num_species": 1,
+      "best_nodes": 24,
+      "best_connections": 1790
+    },
+    {
+      "generation": 477,
+      "best_fitness": -4.854,
+      "mean_fitness": -7.6307,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1804
+    },
+    {
+      "generation": 478,
+      "best_fitness": 6.8435,
+      "mean_fitness": -4.855,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1797
+    },
+    {
+      "generation": 479,
+      "best_fitness": -4.8698,
+      "mean_fitness": -7.0759,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1804
+    },
+    {
+      "generation": 480,
+      "best_fitness": 3.687,
+      "mean_fitness": -1.9929,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1799
+    },
+    {
+      "generation": 481,
+      "best_fitness": 9.9198,
+      "mean_fitness": -2.4219,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1806
+    },
+    {
+      "generation": 482,
+      "best_fitness": 12.6115,
+      "mean_fitness": -1.3748,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1798
+    },
+    {
+      "generation": 483,
+      "best_fitness": -4.854,
+      "mean_fitness": -5.415,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1804
+    },
+    {
+      "generation": 484,
+      "best_fitness": 10.014,
+      "mean_fitness": -16.5499,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1798
+    },
+    {
+      "generation": 485,
+      "best_fitness": 11.2063,
+      "mean_fitness": -8.0012,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1800
+    },
+    {
+      "generation": 486,
+      "best_fitness": 10.0594,
+      "mean_fitness": -3.2524,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1799
+    },
+    {
+      "generation": 487,
+      "best_fitness": 8.4872,
+      "mean_fitness": -7.5149,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1800
+    },
+    {
+      "generation": 488,
+      "best_fitness": 3.3341,
+      "mean_fitness": -19.6747,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1799
+    },
+    {
+      "generation": 489,
+      "best_fitness": -4.805,
+      "mean_fitness": -16.5174,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1799
+    },
+    {
+      "generation": 490,
+      "best_fitness": -4.756,
+      "mean_fitness": -21.9406,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1808
+    },
+    {
+      "generation": 491,
+      "best_fitness": -4.7571,
+      "mean_fitness": -19.862,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1802
+    },
+    {
+      "generation": 492,
+      "best_fitness": -4.756,
+      "mean_fitness": -17.1351,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1808
+    },
+    {
+      "generation": 493,
+      "best_fitness": 16.3111,
+      "mean_fitness": -11.1239,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1809
+    },
+    {
+      "generation": 494,
+      "best_fitness": -6.6304,
+      "mean_fitness": -16.4812,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1804
+    },
+    {
+      "generation": 495,
+      "best_fitness": 6.2768,
+      "mean_fitness": -8.6153,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1794
+    },
+    {
+      "generation": 496,
+      "best_fitness": 3.6707,
+      "mean_fitness": -22.7964,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1809
+    },
+    {
+      "generation": 497,
+      "best_fitness": 15.6275,
+      "mean_fitness": -21.1003,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1806
+    },
+    {
+      "generation": 498,
+      "best_fitness": 19.3855,
+      "mean_fitness": -22.3306,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1808
+    },
+    {
+      "generation": 499,
+      "best_fitness": 2.4928,
+      "mean_fitness": -21.4261,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1799
+    },
+    {
+      "generation": 500,
+      "best_fitness": -4.7321,
+      "mean_fitness": -23.4951,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 501,
+      "best_fitness": -6.5025,
+      "mean_fitness": -24.9735,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1802
+    },
+    {
+      "generation": 502,
+      "best_fitness": -0.1732,
+      "mean_fitness": -21.6809,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1794
+    },
+    {
+      "generation": 503,
+      "best_fitness": 2.0484,
+      "mean_fitness": -33.0506,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1804
+    },
+    {
+      "generation": 504,
+      "best_fitness": 9.0117,
+      "mean_fitness": -25.5705,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1803
+    },
+    {
+      "generation": 505,
+      "best_fitness": -6.6085,
+      "mean_fitness": -26.7858,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1816
+    },
+    {
+      "generation": 506,
+      "best_fitness": -4.7429,
+      "mean_fitness": -24.694,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 507,
+      "best_fitness": 16.7455,
+      "mean_fitness": -22.5491,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1806
+    },
+    {
+      "generation": 508,
+      "best_fitness": -4.7321,
+      "mean_fitness": -28.4271,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 509,
+      "best_fitness": -4.8955,
+      "mean_fitness": -26.0534,
+      "num_species": 1,
+      "best_nodes": 25,
+      "best_connections": 1801
+    },
+    {
+      "generation": 510,
+      "best_fitness": -4.9043,
+      "mean_fitness": -24.5988,
+      "num_species": 1,
+      "best_nodes": 26,
+      "best_connections": 1803
+    },
+    {
+      "generation": 511,
+      "best_fitness": -4.7179,
+      "mean_fitness": -23.3011,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 512,
+      "best_fitness": 10.0437,
+      "mean_fitness": -21.3686,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1819
+    },
+    {
+      "generation": 513,
+      "best_fitness": 10.0323,
+      "mean_fitness": -23.1222,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1804
+    },
+    {
+      "generation": 514,
+      "best_fitness": -4.7321,
+      "mean_fitness": -25.7576,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 515,
+      "best_fitness": 13.0367,
+      "mean_fitness": -25.4463,
+      "num_species": 1,
+      "best_nodes": 27,
+      "best_connections": 1803
+    },
+    {
+      "generation": 516,
+      "best_fitness": 10.489,
+      "mean_fitness": -18.6842,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1820
+    },
+    {
+      "generation": 517,
+      "best_fitness": 10.489,
+      "mean_fitness": -18.9463,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1820
+    },
+    {
+      "generation": 518,
+      "best_fitness": 0.2728,
+      "mean_fitness": -12.727,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 519,
+      "best_fitness": 3.2721,
+      "mean_fitness": -15.4942,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 520,
+      "best_fitness": -6.1022,
+      "mean_fitness": -18.7278,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1808
+    },
+    {
+      "generation": 521,
+      "best_fitness": -4.7179,
+      "mean_fitness": -17.2866,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 522,
+      "best_fitness": -4.8444,
+      "mean_fitness": -17.251,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1808
+    },
+    {
+      "generation": 523,
+      "best_fitness": -6.376,
+      "mean_fitness": -16.9023,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 524,
+      "best_fitness": -4.7321,
+      "mean_fitness": -16.5193,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 525,
+      "best_fitness": -0.4318,
+      "mean_fitness": -14.749,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1810
+    },
+    {
+      "generation": 526,
+      "best_fitness": -4.7179,
+      "mean_fitness": -14.6782,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 527,
+      "best_fitness": 4.4984,
+      "mean_fitness": -10.9169,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1806
+    },
+    {
+      "generation": 528,
+      "best_fitness": 0.3503,
+      "mean_fitness": -10.2288,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1807
+    },
+    {
+      "generation": 529,
+      "best_fitness": 2.2939,
+      "mean_fitness": -5.8384,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1807
+    },
+    {
+      "generation": 530,
+      "best_fitness": 17.4525,
+      "mean_fitness": -5.2328,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1811
+    },
+    {
+      "generation": 531,
+      "best_fitness": -4.7128,
+      "mean_fitness": -11.9666,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 532,
+      "best_fitness": 3.2721,
+      "mean_fitness": -6.0937,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 533,
+      "best_fitness": 4.8877,
+      "mean_fitness": -4.0293,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1804
+    },
+    {
+      "generation": 534,
+      "best_fitness": 8.583,
+      "mean_fitness": -10.0745,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1810
+    },
+    {
+      "generation": 535,
+      "best_fitness": 9.479,
+      "mean_fitness": -7.0218,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1809
+    },
+    {
+      "generation": 536,
+      "best_fitness": 0.8558,
+      "mean_fitness": -12.6714,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1814
+    },
+    {
+      "generation": 537,
+      "best_fitness": 0.8558,
+      "mean_fitness": -10.1745,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1814
+    },
+    {
+      "generation": 538,
+      "best_fitness": 5.0223,
+      "mean_fitness": -11.9836,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 539,
+      "best_fitness": -4.8723,
+      "mean_fitness": -10.7944,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1806
+    },
+    {
+      "generation": 540,
+      "best_fitness": 2.7777,
+      "mean_fitness": -7.8318,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1814
+    },
+    {
+      "generation": 541,
+      "best_fitness": -5.2704,
+      "mean_fitness": -8.275,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1815
+    },
+    {
+      "generation": 542,
+      "best_fitness": 11.7842,
+      "mean_fitness": -0.4187,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1803
+    },
+    {
+      "generation": 543,
+      "best_fitness": 5.8825,
+      "mean_fitness": -16.9774,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1811
+    },
+    {
+      "generation": 544,
+      "best_fitness": 0.2908,
+      "mean_fitness": -14.0939,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1808
+    },
+    {
+      "generation": 545,
+      "best_fitness": 0.2125,
+      "mean_fitness": -18.0363,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1800
+    },
+    {
+      "generation": 546,
+      "best_fitness": 11.8656,
+      "mean_fitness": -8.2781,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1813
+    },
+    {
+      "generation": 547,
+      "best_fitness": 14.3961,
+      "mean_fitness": -14.1564,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1806
+    },
+    {
+      "generation": 548,
+      "best_fitness": 2.8377,
+      "mean_fitness": -14.1941,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1806
+    },
+    {
+      "generation": 549,
+      "best_fitness": 14.3961,
+      "mean_fitness": -21.5177,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1806
+    },
+    {
+      "generation": 550,
+      "best_fitness": -4.8239,
+      "mean_fitness": -15.2939,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1815
+    },
+    {
+      "generation": 551,
+      "best_fitness": -4.8239,
+      "mean_fitness": -12.5912,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1815
+    },
+    {
+      "generation": 552,
+      "best_fitness": 15.6173,
+      "mean_fitness": -10.243,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1800
+    },
+    {
+      "generation": 553,
+      "best_fitness": 14.1336,
+      "mean_fitness": -11.7675,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1807
+    },
+    {
+      "generation": 554,
+      "best_fitness": 14.1336,
+      "mean_fitness": -10.7258,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1807
+    },
+    {
+      "generation": 555,
+      "best_fitness": 5.6674,
+      "mean_fitness": -11.607,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 556,
+      "best_fitness": 1.8053,
+      "mean_fitness": -12.27,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1806
+    },
+    {
+      "generation": 557,
+      "best_fitness": 14.6248,
+      "mean_fitness": -9.1768,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1804
+    },
+    {
+      "generation": 558,
+      "best_fitness": 9.9969,
+      "mean_fitness": -6.0716,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1805
+    },
+    {
+      "generation": 559,
+      "best_fitness": 13.8672,
+      "mean_fitness": -8.2924,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1806
+    },
+    {
+      "generation": 560,
+      "best_fitness": 2.824,
+      "mean_fitness": -14.0801,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1808
+    },
+    {
+      "generation": 561,
+      "best_fitness": 10.0461,
+      "mean_fitness": -7.8924,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1802
+    },
+    {
+      "generation": 562,
+      "best_fitness": 12.6367,
+      "mean_fitness": -10.8012,
+      "num_species": 1,
+      "best_nodes": 28,
+      "best_connections": 1803
+    },
+    {
+      "generation": 563,
+      "best_fitness": 10.0317,
+      "mean_fitness": -5.3774,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1815
+    },
+    {
+      "generation": 564,
+      "best_fitness": 13.6663,
+      "mean_fitness": -10.0002,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1808
+    },
+    {
+      "generation": 565,
+      "best_fitness": 3.6419,
+      "mean_fitness": -5.4465,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1809
+    },
+    {
+      "generation": 566,
+      "best_fitness": -1.8202,
+      "mean_fitness": -10.2821,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1815
+    },
+    {
+      "generation": 567,
+      "best_fitness": 9.782,
+      "mean_fitness": -5.3537,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1811
+    },
+    {
+      "generation": 568,
+      "best_fitness": 12.4723,
+      "mean_fitness": -5.524,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1816
+    },
+    {
+      "generation": 569,
+      "best_fitness": 3.7669,
+      "mean_fitness": -4.1948,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1811
+    },
+    {
+      "generation": 570,
+      "best_fitness": 10.0382,
+      "mean_fitness": -2.6648,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1816
+    },
+    {
+      "generation": 571,
+      "best_fitness": 18.542,
+      "mean_fitness": 6.6468,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1812
+    },
+    {
+      "generation": 572,
+      "best_fitness": 8.7246,
+      "mean_fitness": -3.0133,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1814
+    },
+    {
+      "generation": 573,
+      "best_fitness": 10.2547,
+      "mean_fitness": -2.7391,
+      "num_species": 1,
+      "best_nodes": 32,
+      "best_connections": 1812
+    },
+    {
+      "generation": 574,
+      "best_fitness": 5.3985,
+      "mean_fitness": -1.7919,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1812
+    },
+    {
+      "generation": 575,
+      "best_fitness": -2.9175,
+      "mean_fitness": -5.208,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1815
+    },
+    {
+      "generation": 576,
+      "best_fitness": 18.9641,
+      "mean_fitness": -1.4931,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1806
+    },
+    {
+      "generation": 577,
+      "best_fitness": 16.0358,
+      "mean_fitness": -3.7276,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1812
+    },
+    {
+      "generation": 578,
+      "best_fitness": 12.5886,
+      "mean_fitness": -2.3538,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1816
+    },
+    {
+      "generation": 579,
+      "best_fitness": 19.2896,
+      "mean_fitness": -7.5732,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1813
+    },
+    {
+      "generation": 580,
+      "best_fitness": 12.4683,
+      "mean_fitness": -7.5228,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1814
+    },
+    {
+      "generation": 581,
+      "best_fitness": 12.132,
+      "mean_fitness": -12.72,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1805
+    },
+    {
+      "generation": 582,
+      "best_fitness": 1.7525,
+      "mean_fitness": -13.6367,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1803
+    },
+    {
+      "generation": 583,
+      "best_fitness": 12.1318,
+      "mean_fitness": -13.2487,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1814
+    },
+    {
+      "generation": 584,
+      "best_fitness": 12.1318,
+      "mean_fitness": -13.7707,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1814
+    },
+    {
+      "generation": 585,
+      "best_fitness": 9.8496,
+      "mean_fitness": -13.5819,
+      "num_species": 1,
+      "best_nodes": 32,
+      "best_connections": 1813
+    },
+    {
+      "generation": 586,
+      "best_fitness": 12.4364,
+      "mean_fitness": -11.0124,
+      "num_species": 1,
+      "best_nodes": 32,
+      "best_connections": 1812
+    },
+    {
+      "generation": 587,
+      "best_fitness": 12.4364,
+      "mean_fitness": -11.5828,
+      "num_species": 1,
+      "best_nodes": 32,
+      "best_connections": 1812
+    },
+    {
+      "generation": 588,
+      "best_fitness": 0.597,
+      "mean_fitness": -12.479,
+      "num_species": 1,
+      "best_nodes": 32,
+      "best_connections": 1821
+    },
+    {
+      "generation": 589,
+      "best_fitness": 8.926,
+      "mean_fitness": -9.5287,
+      "num_species": 1,
+      "best_nodes": 32,
+      "best_connections": 1821
+    },
+    {
+      "generation": 590,
+      "best_fitness": 8.7415,
+      "mean_fitness": -12.2346,
+      "num_species": 1,
+      "best_nodes": 33,
+      "best_connections": 1816
+    },
+    {
+      "generation": 591,
+      "best_fitness": -6.5768,
+      "mean_fitness": -11.0402,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1804
+    },
+    {
+      "generation": 592,
+      "best_fitness": 8.1458,
+      "mean_fitness": -7.3764,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1805
+    },
+    {
+      "generation": 593,
+      "best_fitness": 1.2304,
+      "mean_fitness": -8.8147,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1815
+    },
+    {
+      "generation": 594,
+      "best_fitness": 14.632,
+      "mean_fitness": -5.5669,
+      "num_species": 1,
+      "best_nodes": 29,
+      "best_connections": 1805
+    },
+    {
+      "generation": 595,
+      "best_fitness": 10.0638,
+      "mean_fitness": -8.659,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1812
+    },
+    {
+      "generation": 596,
+      "best_fitness": 14.8305,
+      "mean_fitness": -4.2484,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1815
+    },
+    {
+      "generation": 597,
+      "best_fitness": 14.8305,
+      "mean_fitness": -5.5404,
+      "num_species": 1,
+      "best_nodes": 31,
+      "best_connections": 1815
+    },
+    {
+      "generation": 598,
+      "best_fitness": 13.3377,
+      "mean_fitness": -6.4968,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1811
+    },
+    {
+      "generation": 599,
+      "best_fitness": 10.4643,
+      "mean_fitness": 1.1305,
+      "num_species": 1,
+      "best_nodes": 30,
+      "best_connections": 1816
+    },
+    {
+      "generation": 600,
+      "best_fitness": 4.1872,
+      "mean_fitness": -4.4643,
+      "num_species": 1,
+      "best_nodes": 32,
+      "best_connections": 1816
+    }
+  ]
+}
